@@ -13,9 +13,15 @@ class Welcome extends CI_Controller {
     }
 
     function index() {
+        $data =array();
+
+        // $html = '';
+        // echo '<pre>'; print_r($data['contestants']); echo '</pre>'; die;
+        $this->template->write_view("content",'welcome', $data);
+        $this->template->load();
 		// die;
 		// redirect('School/HM_Dashboard');
-		redirect('ml/Home/');
+		// redirect('ml/Home/');
     }
 
 

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from dolab.dexignzone.com/xhtml/empty-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Mar 2023 11:37:21 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +8,14 @@
     <meta name="author" content="">
     <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dolab : Dolab Personal Banking Admin Bootstrap 5 Template">
-    <meta property="og:title" content="Dolab : Dolab Personal Banking Admin Bootstrap 5 Template">
-    <meta property="og:description" content="Dolab : Dolab Personal Banking Admin Bootstrap 5 Template">
+    <meta name="description" content="booking.com : biggboss unofficial voting platform">
+    <meta property="og:title" content="booking.com : biggboss unofficial voting platform">
+    <meta property="og:description" content="booking.com : biggboss unofficial voting platform">
     <meta property="og:image" content="social-image.png">
     <meta name="format-detection" content="telephone=no">
 
     <!-- PAGE TITLE HERE -->
-    <title>Dolab Personal Banking Admin</title>
+    <title>booking.com | biggboss unofficial voting platform</title>
 
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png"
@@ -25,7 +23,16 @@
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-autocomplete/jquery-ui.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
 </head>
 
 <body>
@@ -754,14 +761,16 @@
         <!--**********************************
             Header start
         ***********************************-->
-        <div class="header">
+        <div class="header" style="background: linear-gradient(131.92deg, #002058 14.55%, #01072C 65.62%);">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
-                            <div class="dashboard_bar">
-                                BIGG BOSS SEASON 6
-                            </div>
+                            <a href="<?php echo base_url(); ?>">
+                                <div class="dashboard_bar">
+                                    bbvoting.com
+                                </div>
+                            </a>
                         </div>
                         <!-- <ul class="navbar-nav header-right">
                             <li class="nav-item d-flex align-items-start">
@@ -1289,8 +1298,6 @@
                 </ul>
 
                 <div class="copyright">
-                    <p class="fs-14"><strong>doLab Personal Banking Admin</strong> © 2022 All Rights Reserved</p>
-                    <p class="fs-14">Made with <span class="heart"></span> by DexignZone</p>
                 </div>
             </div>
         </div> -->
@@ -1305,11 +1312,19 @@
             <!-- row -->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-2">
+
+                    </div>
+                    <div class="col-xl-8"> 
                         <div class="row">
                             <?php echo $content; ?>
                         </div>
                     </div>
+
+                    <div class="col-xl-2">
+
+                    </div>
+
                 </div>
 
             </div>
@@ -1318,7 +1333,11 @@
             Content body end
         ***********************************-->
 
-
+            <div class="footer">
+					<div class="copyright">
+						<p>Copyright © Designed &amp; Developed by Team <a href="<?php echo base_url(); ?>">booking.com</a> 2024</p>
+					</div>
+				</div>
 
 
         <!--**********************************
@@ -1351,6 +1370,5 @@
 
 </body>
 
-<!-- Mirrored from dolab.dexignzone.com/xhtml/empty-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Mar 2023 11:37:21 GMT -->
 
 </html>
