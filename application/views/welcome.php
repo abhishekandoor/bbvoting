@@ -247,8 +247,7 @@ h4 {
                                         kid_star
                                     </span>
                                     <div class="media-body">
-                                        <p class="how_to_points mb-0">I shared this on my fb wall a few months back, and
-                                            I thought.
+                                        <p class="how_to_points mb-0">You can bookmark this page and come back every day to vote.
                                         </p>
                                     </div>
                                 </div>
@@ -256,8 +255,7 @@ h4 {
                                         kid_star
                                     </span>
                                     <div class="media-body">
-                                        <p class="how_to_points mb-0">I shared this on my fb wall a few months back, and
-                                            I thought.
+                                        <p class="how_to_points mb-0">or search “Bigg Boss Malayalam Voting” on Google and click on this website’s link which is <a href="https://bbvoting.com">bbvoting.com</a> from the results
                                         </p>
                                     </div>
                                 </div>
@@ -266,8 +264,7 @@ h4 {
                                         kid_star
                                     </span>
                                     <div class="media-body">
-                                        <p class="how_to_points mb-0">I shared this on my fb wall a few months back, and
-                                            I thought.
+                                        <p class="how_to_points mb-0">We can guarantee that the votes you see on this website will almost be equal to the official Hotstar voting trends. No more fake voting counts, modifications, etc. like other unofficial polls.
                                         </p>
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@
             <div class="main-div d-flex align-items-center justify-content-between">
                 <div class="left__div">
                     <div class="photo__div text-center">
-                        <img src='https://www.indiajobrecruitment.com/wp-content/uploads/2023/07/Akhil-Marar.webp'
+                        <img src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
                             style="height: 8em;" />
                     </div>
                     <div class="title__div text-center">
@@ -19,7 +19,7 @@
                                 <h4 class="text-white"><?php echo $row['name'] ?></h4>
                         </div>
                         <div class="profession__div text-center">
-                            <h5 class="text-white">Actor</h5>
+                            <h5 class="text-white" style="font-size:x-small;"><small>The information has not been formally released to the public.</small></h5>
                         </div>
                     </div>
                 </div>

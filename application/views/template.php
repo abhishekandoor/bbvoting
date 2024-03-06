@@ -18,8 +18,7 @@
     <title>booking.com | biggboss unofficial voting platform</title>
 
     <!-- FAVICONS ICON -->
-    <link rel="shortcut icon" type="image/png"
-        href="<?php echo base_url(); ?>assets/<?php echo base_url(); ?>assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/<?php echo base_url(); ?>assets/images/favicon.png">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-autocomplete/jquery-ui.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
@@ -27,10 +26,10 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
         }
     </style>
 </head>
@@ -62,13 +61,9 @@
             <span class="circle four"></span>
             <span class="line-1 ">
                 <svg width="1920" height="450" viewBox="0 0 1920 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3"
-                        d="M0 155L95.4613 293.923C106.459 309.928 131.116 305.943 136.512 287.289L209.86 33.7127C215.892 12.8576 244.803 11.2033 253.175 31.2341L344.838 250.546C352.224 268.217 376.708 269.648 386.102 252.958L519.839 15.3693C529.061 -1.01332 552.975 -0.0134089 560.797 17.0818L716.503 357.389C724.454 374.766 748.899 375.43 757.782 358.51L902.518 82.8223C911.524 65.6685 936.406 66.653 944.028 84.4648L1093.06 432.731C1101.14 451.601 1128.01 451.247 1135.58 432.172L1291.33 39.9854C1298.27 22.5135 1322.1 20.2931 1332.14 36.1824L1473.74 260.126C1482.47 273.922 1502.38 274.494 1511.88 261.221L1667.88 43.3025C1678.17 28.9257 1700.16 31.0533 1707.5 47.1365L1844.91 348.06C1853.69 367.287 1881.58 365.486 1887.81 345.29L1970 79"
-                        stroke="url(#paint0_linear_332_3757)" stroke-opacity="0.4" stroke-width="6"
-                        stroke-linecap="round" />
+                    <path opacity="0.3" d="M0 155L95.4613 293.923C106.459 309.928 131.116 305.943 136.512 287.289L209.86 33.7127C215.892 12.8576 244.803 11.2033 253.175 31.2341L344.838 250.546C352.224 268.217 376.708 269.648 386.102 252.958L519.839 15.3693C529.061 -1.01332 552.975 -0.0134089 560.797 17.0818L716.503 357.389C724.454 374.766 748.899 375.43 757.782 358.51L902.518 82.8223C911.524 65.6685 936.406 66.653 944.028 84.4648L1093.06 432.731C1101.14 451.601 1128.01 451.247 1135.58 432.172L1291.33 39.9854C1298.27 22.5135 1322.1 20.2931 1332.14 36.1824L1473.74 260.126C1482.47 273.922 1502.38 274.494 1511.88 261.221L1667.88 43.3025C1678.17 28.9257 1700.16 31.0533 1707.5 47.1365L1844.91 348.06C1853.69 367.287 1881.58 365.486 1887.81 345.29L1970 79" stroke="url(#paint0_linear_332_3757)" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round" />
                     <defs>
-                        <linearGradient id="paint0_linear_332_3757" x1="1946.24" y1="352.062" x2="-1.52124" y2="345.607"
-                            gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint0_linear_332_3757" x1="1946.24" y1="352.062" x2="-1.52124" y2="345.607" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#6E4AFF" />
                             <stop offset="0.479167" stop-color="#E43BFF" />
                             <stop offset="1" stop-color="#6E4AFF" />
@@ -78,13 +73,9 @@
             </span>
             <span class="line-2">
                 <svg width="1920" height="459" viewBox="0 0 1920 459" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0 89L103.191 296.201C112.034 313.958 137.703 312.941 145.114 294.54L224.847 96.5574C232.264 78.141 257.962 77.1423 266.786 94.9275L352.649 267.995C360.863 284.553 384.264 285.148 393.31 269.03L516.226 50.0159C525.164 34.0902 548.205 34.4325 556.666 50.6167L713.497 350.608C721.71 366.318 743.86 367.222 753.326 352.234L901.462 117.684C911.188 102.286 934.102 103.763 941.771 120.282L1091.14 442.062C1099.38 459.816 1124.62 459.817 1132.86 442.064L1303.17 75.2544C1310.64 59.1685 1332.73 57.2308 1342.89 71.7713L1469.94 253.703C1479.15 266.893 1498.71 266.794 1507.78 253.511L1671.82 13.4627C1681.74 -1.05968 1703.63 0.478486 1711.42 16.2459L1844.42 285.267C1853.64 303.905 1880.89 301.723 1887.02 281.857L1970 13"
-                        stroke="url(#paint0_linear_332_3758)" stroke-opacity="0.4" stroke-width="6"
-                        stroke-linecap="round" />
+                    <path d="M0 89L103.191 296.201C112.034 313.958 137.703 312.941 145.114 294.54L224.847 96.5574C232.264 78.141 257.962 77.1423 266.786 94.9275L352.649 267.995C360.863 284.553 384.264 285.148 393.31 269.03L516.226 50.0159C525.164 34.0902 548.205 34.4325 556.666 50.6167L713.497 350.608C721.71 366.318 743.86 367.222 753.326 352.234L901.462 117.684C911.188 102.286 934.102 103.763 941.771 120.282L1091.14 442.062C1099.38 459.816 1124.62 459.817 1132.86 442.064L1303.17 75.2544C1310.64 59.1685 1332.73 57.2308 1342.89 71.7713L1469.94 253.703C1479.15 266.893 1498.71 266.794 1507.78 253.511L1671.82 13.4627C1681.74 -1.05968 1703.63 0.478486 1711.42 16.2459L1844.42 285.267C1853.64 303.905 1880.89 301.723 1887.02 281.857L1970 13" stroke="url(#paint0_linear_332_3758)" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round" />
                     <defs>
-                        <linearGradient id="paint0_linear_332_3758" x1="1946.24" y1="286.062" x2="-1.52105" y2="279.607"
-                            gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint0_linear_332_3758" x1="1946.24" y1="286.062" x2="-1.52105" y2="279.607" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#6E4AFF" />
                             <stop offset="0.479167" stop-color="#E43BFF" />
                             <stop offset="1" stop-color="#6E4AFF" />
@@ -149,13 +140,10 @@
                         <div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
                             <div class="card-header chat-list-header text-center">
                                 <a href="#" class="add" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect fill="#ffffff" x="4" y="11" width="16" height="2" rx="1" />
-                                            <rect fill="#ffffff" opacity="0.3"
-                                                transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
-                                                x="4" y="11" width="16" height="2" rx="1" />
+                                            <rect fill="#ffffff" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" />
                                         </g>
                                     </svg>
                                 </a>
@@ -163,9 +151,7 @@
                                     <h6 class="mb-1">Chat List</h6>
                                     <p class="mb-0">Show All</p>
                                 </div>
-                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
-                                        viewBox="0 0 24 24" version="1.1">
+                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24" />
                                             <circle fill="#000000" cx="5" cy="12" r="2" />
@@ -180,8 +166,7 @@
                                     <li class="active dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -193,8 +178,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -206,8 +190,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -219,8 +202,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -233,8 +215,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -246,8 +227,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -259,8 +239,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -273,8 +252,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -286,8 +264,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -300,8 +277,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -313,8 +289,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -326,8 +301,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -339,8 +313,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/3.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
@@ -353,8 +326,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/4.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -366,8 +338,7 @@
                                     <li class="dz-chat-user">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg"
-                                                    class="rounded-circle user_img" alt="">
+                                                <img src="<?php echo base_url(); ?>assets/images/avatar/5.jpg" class="rounded-circle user_img" alt="">
                                                 <span class="online_icon offline"></span>
                                             </div>
                                             <div class="user_info">
@@ -382,17 +353,11 @@
                         <div class="card chat dz-chat-history-box d-none">
                             <div class="card-header chat-list-header text-center">
                                 <a href="javascript:void(0);" class="dz-chat-history-back">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <polygon points="0 0 24 0 24 24 0 24" />
-                                            <rect fill="#000000" opacity="0.3"
-                                                transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) "
-                                                x="14" y="7" width="2" height="10" rx="1" />
-                                            <path
-                                                d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z"
-                                                fill="#000000" fill-rule="nonzero"
-                                                transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " />
+                                            <rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1" />
+                                            <path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " />
                                         </g>
                                     </svg>
                                 </a>
@@ -401,10 +366,7 @@
                                     <p class="mb-0 text-success">Online</p>
                                 </div>
                                 <div class="dropdown">
-                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false"><svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
-                                            viewBox="0 0 24 24" version="1.1">
+                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                 <rect x="0" y="0" width="24" height="24" />
                                                 <circle fill="#000000" cx="5" cy="12" r="2" />
@@ -426,8 +388,7 @@
                             <div class="card-body msg_card_body dz-scroll" id="DLAB_W_Contacts_Body3">
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         Hi, how are you samim?
@@ -440,14 +401,12 @@
                                         <span class="msg_time_send">8:55 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         I am good too, thank you for your chat template
@@ -460,14 +419,12 @@
                                         <span class="msg_time_send">9:05 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         I am looking for your next templates
@@ -480,14 +437,12 @@
                                         <span class="msg_time_send">9:10 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         Bye, see you
@@ -496,8 +451,7 @@
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         Hi, how are you samim?
@@ -510,14 +464,12 @@
                                         <span class="msg_time_send">8:55 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         I am good too, thank you for your chat template
@@ -530,14 +482,12 @@
                                         <span class="msg_time_send">9:05 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         I am looking for your next templates
@@ -550,14 +500,12 @@
                                         <span class="msg_time_send">9:10 AM, Today</span>
                                     </div>
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start mb-4">
                                     <div class="img_cont_msg">
-                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg"
-                                            class="rounded-circle user_img_msg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="">
                                     </div>
                                     <div class="msg_cotainer">
                                         Bye, see you
@@ -569,8 +517,7 @@
                                 <div class="input-group">
                                     <textarea class="form-control" placeholder="Type your message..."></textarea>
                                     <div class="input-group-append">
-                                        <button type="button" class="btn btn-primary"><i
-                                                class="fa fa-location-arrow"></i></button>
+                                        <button type="button" class="btn btn-primary"><i class="fa fa-location-arrow"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -579,9 +526,7 @@
                     <div class="tab-pane fade" id="alerts" role="tabpanel">
                         <div class="card mb-sm-3 mb-md-0 contacts_card">
                             <div class="card-header chat-list-header text-center">
-                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
-                                        viewBox="0 0 24 24" version="1.1">
+                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24" />
                                             <circle fill="#000000" cx="5" cy="12" r="2" />
@@ -593,17 +538,11 @@
                                     <h6 class="mb-1">Notications</h6>
                                     <p class="mb-0">Show All</p>
                                 </div>
-                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
-                                        viewBox="0 0 24 24" version="1.1">
+                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24" />
-                                            <path
-                                                d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
-                                                fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                            <path
-                                                d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
-                                                fill="#000000" fill-rule="nonzero" />
+                                            <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
                                         </g>
                                     </svg></a>
                             </div>
@@ -657,13 +596,10 @@
                         <div class="card mb-sm-3 mb-md-0 note_card">
                             <div class="card-header chat-list-header text-center">
                                 <a href="#" class="add" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect fill="#ffffff" x="4" y="11" width="16" height="2" rx="1" />
-                                            <rect fill="#ffffff" opacity="0.3"
-                                                transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
-                                                x="4" y="11" width="16" height="2" rx="1" />
+                                            <rect fill="#ffffff" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" />
                                         </g>
                                     </svg>
                                 </a>
@@ -671,17 +607,11 @@
                                     <h6 class="mb-1">Notes</h6>
                                     <p class="mb-0">Add New Nots</p>
                                 </div>
-                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
-                                        viewBox="0 0 24 24" version="1.1">
+                                <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24" />
-                                            <path
-                                                d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
-                                                fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                            <path
-                                                d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
-                                                fill="#000000" fill-rule="nonzero" />
+                                            <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                            <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
                                         </g>
                                     </svg></a>
                             </div>
@@ -694,11 +624,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <a href="javascript:void(0);"
-                                                    class="btn btn-primary btn-xs sharp me-1"><i
-                                                        class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
-                                                        class="fa fa-trash"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -709,11 +636,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <a href="javascript:void(0);"
-                                                    class="btn btn-primary btn-xs sharp me-1"><i
-                                                        class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
-                                                        class="fa fa-trash"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -724,11 +648,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <a href="javascript:void(0);"
-                                                    class="btn btn-primary btn-xs sharp me-1"><i
-                                                        class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
-                                                        class="fa fa-trash"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -739,11 +660,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <a href="javascript:void(0);"
-                                                    class="btn btn-primary btn-xs sharp me-1"><i
-                                                        class="fas fa-pencil-alt"></i></a>
-                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
-                                                        class="fa fa-trash"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -772,24 +690,17 @@
                                 </div>
                             </a>
                         </div>
-                        <!-- <ul class="navbar-nav header-right">
-                            <li class="nav-item d-flex align-items-start">
-                                <div class="input-group search-area">
-                                    <input type="text" class="form-control" id="search" placeholder="Search here...">
-                                    <span class="input-group-text"><a href="javascript:void(0)"><svg width="28"
-                                                height="28" viewBox="0 0 28 28" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path opacity="1"
-                                                    d="M16.6751 19.4916C16.2194 19.036 16.2194 18.2973 16.6751 17.8417C17.1307 17.3861 17.8694 17.3861 18.325 17.8417L22.9916 22.5084C23.4473 22.964 23.4473 23.7027 22.9916 24.1583C22.536 24.6139 21.7973 24.6139 21.3417 24.1583L16.6751 19.4916Z"
-                                                    fill="white" />
-                                                <path
-                                                    d="M12.8333 18.6667C16.055 18.6667 18.6667 16.055 18.6667 12.8334C18.6667 9.61169 16.055 7.00002 12.8333 7.00002C9.61166 7.00002 6.99999 9.61169 6.99999 12.8334C6.99999 16.055 9.61166 18.6667 12.8333 18.6667ZM12.8333 21C8.323 21 4.66666 17.3437 4.66666 12.8334C4.66666 8.32303 8.323 4.66669 12.8333 4.66669C17.3436 4.66669 21 8.32303 21 12.8334C21 17.3437 17.3436 21 12.8333 21Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </a></span>
-                                </div>
-                            </li>
-                        </ul> -->
+                        <div class="header-left">
+                            <ul class="navbar-nav header-right">
+                                <li class="nav-item d-flex align-items-start">
+                                    <a href="<?php echo base_url(); ?>index.php/ml/Home">
+                                        <div class="dashboard_bar">
+                                            <small>Malayalam</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- <div class="dropdown header-profile2 ">
                             <ul class="navbar-nav header-right me-sm-4">
                                 <li class="nav-item dropdown notification_dropdown">
@@ -1315,7 +1226,7 @@
                     <div class="col-xl-2">
 
                     </div>
-                    <div class="col-xl-8"> 
+                    <div class="col-xl-8">
                         <div class="row">
                             <?php echo $content; ?>
                         </div>
@@ -1333,11 +1244,16 @@
             Content body end
         ***********************************-->
 
-            <div class="footer">
-					<div class="copyright">
-						<p>Copyright © Designed &amp; Developed by Team <a href="<?php echo base_url(); ?>">booking.com</a> 2024</p>
-					</div>
-				</div>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by Team <a href="<?php echo base_url(); ?>">booking.com</a> 2024</p>
+            </div>
+
+            <div class="copyright">
+                <p>Privacy Policy <a href="<?php echo base_url(); ?>"> | Privacy Policy</a></p>
+            </div>
+
+        </div>
 
 
         <!--**********************************
