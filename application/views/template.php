@@ -1250,7 +1250,7 @@
             </div>
 
             <div class="copyright">
-                <p>Privacy Policy <a href="<?php echo base_url(); ?>"> | Privacy Policy</a></p>
+            <p>Privacy Policy <a target="_blank" href="http://bbvoting.com/privacypolicy.html"> | Privacy Policy</a></p>
             </div>
 
         </div>
