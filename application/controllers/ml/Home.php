@@ -16,4 +16,10 @@ class Home extends MY_Controller
         $this->template->write_view("content",'ml/contestants', $data);
         $this->template->load();
     }
+    function results(){
+        $data =array();
+        $data['contestants'] = $this->General->getdata('contestants','*');
+        $this->template->write_view("content",'ml/results', $data);
+        $this->template->load();
+    }
 }

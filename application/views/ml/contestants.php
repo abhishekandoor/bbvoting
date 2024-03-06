@@ -1,3 +1,9 @@
+<style>
+
+</style>
+<div>
+        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - Week 2</h2>
+    </div>
 <?php foreach($contestants as $row){ ?>
 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
     <div class="card  wallet">
@@ -28,7 +34,7 @@
                     flex-direction: column;
                     align-items: center;">
                         <div class="send m-auto bg-white">
-                            <a href="#">
+                            <a href="<?php echo base_url().'index.php/ml/Home/results' ?>">
                                 <img src="<?php echo base_url().'assets/icons/vote2.png'; ?>" style="margin-bottom:5px;"/>
                             </a>
                         </div>
