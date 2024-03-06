@@ -714,7 +714,7 @@
                                     <a href="<?php echo base_url(); ?>contact-us">
                                         <div class="dashboard_bar" style="color: white;
   font-size: 1.5em;">
-                                            <small>Contact us</small>
+                                            <small>Contact </small>
                                         </div>
                                     </a>
                                 </li>
