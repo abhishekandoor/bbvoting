@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="robots" content="">
+    <!-- <meta name="keywords" content=""> -->
+    <meta name="author" content="BBVOTING.COM">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="booking.com : biggboss unofficial voting platform">
-    <meta property="og:title" content="booking.com : biggboss unofficial voting platform">
-    <meta property="og:description" content="booking.com : biggboss unofficial voting platform">
+    <meta name="description" content="bbvoting.com : biggboss unofficial voting platform">
+    <meta property="og:title" content="bbvoting.com : biggboss unofficial voting platform">
+    <meta property="og:description" content="bbvoting.com : biggboss unofficial voting platform">
     <meta property="og:image" content="social-image.png">
     <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6, biggboss contestants, biggboss updates">
 
     <!-- PAGE TITLE HERE -->
-    <title>booking.com | biggboss unofficial voting platform</title>
+    <title>biggboss | biggboss unofficalvoting | biggboss unofficial voting platform</title>
 
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/<?php echo base_url(); ?>assets/images/favicon.png">
@@ -1250,7 +1251,7 @@
             </div>
 
             <div class="copyright">
-            <p>Privacy Policy <a target="_blank" href="http://bbvoting.com/privacypolicy.html"> | Privacy Policy</a></p>
+                <p>Privacy Policy <a target="_blank" href="http://bbvoting.com/privacypolicy.html"> | Privacy Policy</a></p>
             </div>
 
         </div>
