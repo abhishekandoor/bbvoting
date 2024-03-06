@@ -1266,7 +1266,7 @@
 
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by Team <a href="<?php echo base_url(); ?>">booking.com</a> 2024</p>
+                <p>Copyright © Designed &amp; Developed by Team <a href="<?php echo base_url(); ?>">bbvoting.com</a> 2024</p>
             </div>
 
             <div class="copyright">
