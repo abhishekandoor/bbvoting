@@ -118,9 +118,23 @@ h4 {
     </div>
     <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5"
             href="<?php echo base_url().'index.php/ml/Home' ?>">Malayalam</a></div>
-
+    <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5"
+          target="_blank"  href="<?php echo base_url().'contact-us' ?>">Contact - us</a></div>
 
 </div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892"
+     crossorigin="anonymous"></script>
+<!-- Ad-1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9199579426500892"
+     data-ad-slot="6478673005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <div class="second-container">
     <div class="row page-titles">
@@ -276,3 +290,15 @@ h4 {
         </div>
     </div>
 </div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9199579426500892"
+     data-ad-slot="5392822043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

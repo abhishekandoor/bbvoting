@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
     <meta property="og:image" content="social-image.png">
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6, biggboss contestants, biggboss updates">
-
+    <meta name="google-adsense-account" content="ca-pub-9199579426500892">
     <!-- PAGE TITLE HERE -->
     <title>biggboss | biggboss unofficalvoting | biggboss unofficial voting platform</title>
 
@@ -33,6 +34,12 @@
                 'opsz' 24
         }
     </style>
+    
+    <!-- GOOGLE ADDSENSE MAIN -->
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892"
+     crossorigin="anonymous"></script>
+     
 </head>
 
 <body>
@@ -691,17 +698,29 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="header-left">
+       
+                             <div class="header-right">
                             <ul class="navbar-nav header-right">
+                                                                <li class="nav-item d-flex align-items-start">
+
+                                 <a href="<?php echo base_url(); ?>index.php/ml/Home">
+                                        <div class="dashboard_bar" style="color: white;
+  font-size: 1.5em;">
+                                            <small>Malayalam</small>  &ensp;  | 
+                                        </div>
+                                    </a>
+                                    </li>
                                 <li class="nav-item d-flex align-items-start">
-                                    <a href="<?php echo base_url(); ?>index.php/ml/Home">
-                                        <div class="dashboard_bar">
-                                            <small>Malayalam</small>
+                                    <a href="<?php echo base_url(); ?>contact-us">
+                                        <div class="dashboard_bar" style="color: white;
+  font-size: 1.5em;">
+                                            <small>Contact us</small>
                                         </div>
                                     </a>
                                 </li>
                             </ul>
                         </div>
+                        
                         <!-- <div class="dropdown header-profile2 ">
                             <ul class="navbar-nav header-right me-sm-4">
                                 <li class="nav-item dropdown notification_dropdown">
