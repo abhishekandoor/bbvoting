@@ -37,7 +37,7 @@
     .third-container {
         /* min-height: 100vh; */
 
-        margin-top: 12em;
+        margin-top:12em;
     }
 
     .service_icons {
@@ -129,12 +129,6 @@
     </div>
     <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5" href="<?php echo base_url() . 'index.php/ml/Home' ?>">Malayalam</a></div>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
-    <!-- Add4 -->
-    <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
 </div>
 

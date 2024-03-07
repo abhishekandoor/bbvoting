@@ -988,6 +988,12 @@
                 <div class="row">
                     <div class="col-xl-2">
 
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
+                        <!-- Add4 -->
+                        <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
                     <div class="col-xl-8">
                         <div class="row">
@@ -997,6 +1003,12 @@
 
                     <div class="col-xl-2">
 
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
+                        <!-- Add4 -->
+                        <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
 
                 </div>
