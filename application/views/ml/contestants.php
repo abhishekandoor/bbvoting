@@ -2,9 +2,11 @@
 
 </style>
 <div>
-        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - Week 2</h2>
+        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - Week 1</h2>
     </div>
-<?php foreach($contestants as $row){ ?>
+<?php 
+
+foreach($contestants as $row){ ?>
 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
     <div class="card  wallet">
         <div class="boxs">
@@ -25,7 +27,7 @@
                                 <h4 class="text-white"><?php echo $row['name'] ?></h4>
                         </div>
                         <div class="profession__div text-center">
-                            <h5 class="text-white" style="font-size:x-small;"><small>The information has not been formally released to the public.</small></h5>
+                            <h5 class="text-white" style="font-size:x-small;"><small><?php echo $row['profession'] ?></small></h5>
                         </div>
                     </div>
                 </div>
@@ -34,7 +36,7 @@
                     flex-direction: column;
                     align-items: center;">
                         <div class="send m-auto bg-white">
-                            <a href="<?php echo base_url().'index.php/ml/Home/results' ?>">
+                            <a href="#" onclick="voteForContestant(<?php echo $row['id'] ?>);">
                                 <img src="<?php echo base_url().'assets/icons/vote2.png'; ?>" style="margin-bottom:5px;"/>
                             </a>
                         </div>
@@ -47,3 +49,31 @@
     </div>
 </div>
 <?php } ?>
+<script>// AJAX function to handle the voting
+function voteForContestant(contestantId) {
+    // Get the contestant ID and IP address
+    var ipAddress = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
+    // Encrypt the contestant ID (you can use any encryption method here)
+    var encryptedContestantId = btoa(contestantId);
+
+    // AJAX request
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url('index.php/ml/Home/vote'); ?>",
+        data: {
+            'csrf_saveMe': csrf_token,
+            contestant_id: encryptedContestantId,
+        },
+        success: function(response) {
+            // Handle success response
+            window.location.href = "<?php echo base_url(); ?>index.php/ml/Home/results";
+        },
+        error: function(xhr, status, error) {
+            // Handle error
+            console.error("Error occurred while voting: " + error);
+        }
+    });
+}
+
+
+</script>

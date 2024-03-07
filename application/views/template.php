@@ -1302,6 +1302,10 @@
     <script src="<?php echo base_url(); ?>assets/js/dlabnav-init.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/demo.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/styleSwitcher.js"></script>
+    <script>
+        var csrf_token = '<?php echo $this->security->get_csrf_hash(); ?>';
+
+    </script>
 
 
 </body>

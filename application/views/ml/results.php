@@ -80,10 +80,13 @@
 </style>
 <div class="main_container">
     <div>
-        <h2 class="Result-heading">Result - Week 2</h2>
+        <h2 class="Result-heading">Result - <?php echo $week->week_name; ?></h2>
     </div>
     <div class="row">
-        <?php foreach($contestants as $row){ ?>
+        <?php foreach($contestants as $row){
+            $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
+            $total_percentage = $votes/$total_weekly_vote*100;
+            ?>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="card  wallet">
                 <div class="boxs">
@@ -104,8 +107,7 @@
                                     <h4 class="text-white"><?php echo $row['name'] ?></h4>
                                 </div>
                                 <div class="profession__div text-center">
-                                    <h5 class="text-white" style="font-size:x-small;"><small>The information has not been
-                                            formally released to the public.</small></h5>
+                                    <h5 class="text-white" style="font-size:x-small;"><small><?php echo $row['profession']; ?></small></h5>
                                 </div>
                             </div>
                         </div>
@@ -116,12 +118,12 @@
                                 </span>
                                 <span class="voted_label">voted</span>
                                 <div>
-                                    <span class="total_percentage">60%
+                                    <span class="total_percentage"><?php echo round($total_percentage).'%'; ?>
                                     </span>
                                 </div>
         
                                 <div>
-                                    <span class="total_percentage">150000 <span class="votes_count_label"> votes</span>
+                                    <span class="total_percentage"><?php echo $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0 ?> <span class="votes_count_label"> votes</span>
                                     </span>
         
                                 </div>
