@@ -1,108 +1,119 @@
 <style>
-h1 {
-    font-size: 5em;
-    font-weight: bolder;
-}
-
-h3 {
-    font-weight: bold;
-    font-size: 1.8em;
-}
-
-h4 {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.site_desc {
-    font-size: 1.7em;
-    color: yellow;
-}
-
-.title {
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
-.description {
-    font-size: 1.3em;
-}
-
-.main-container {
-    min-height: 100vh;
-    padding-top: 10em;
-}
-
-.second-container,
-.third-container {
-    min-height: 100vh;
-
-    /* margin-top:12em; */
-}
-
-.service_icons {
-    font-size: 3.8em;
-
-}
-
-.services {
-    width: 50%;
-    padding: 40px 20px;
-    border: 2px dashed transparent; /* Set a transparent border */
-    border-radius: 4px; /* Add border radius */
-    transition: border-color 0.3s ease, border-radius 0.3s ease; 
-}
-.services:hover{
-    border-color: #fff; /* Change the border color */
-    border-radius: 8px; /* Adjust the border radius */
-}
-
-.services div {
-    text-align: center;
-}
-
-.how_to_points {
-    /* color: white !important; */
-    font-size: 1.1em;
-}
-
-.how_to_vote_icons {
-    margin-right: 10px;
-}
-
-.vote_icon {
-    font-size: 2.2em;
-}
-.animation-text {
-  /* bottom: 60% !important; */
-  animation: bottomFadeOut 2s ease-in-out;
-
-}
-@keyframes bottomFadeOut {
-  0% {
-    /* position: absolute; */
-    margin-top: 250px ;
-    opacity: 0;
-  }
-
-  100% {
-    /* position: absolute; */
-    margin-top: 0rem;
-    opacity: 1;
-  }
-}
-@media only screen and (max-width: 767px) {
-    /* CSS rules specific to mobile devices go here */
     h1 {
-        font-size: 2.5em;
+        font-size: 5em;
+        font-weight: bolder;
     }
+
+    h3 {
+        font-weight: bold;
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
     .site_desc {
-        font-size: 1.4em;
+        font-size: 1.7em;
+        color: yellow;
     }
+
+    .title {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 1.3em;
+    }
+
+    .main-container {
+        /* min-height: 50vh; */
+        /* padding-top: 10em; */
+    }
+
+    .second-container,
+    .third-container {
+        /* min-height: 100vh; */
+
+        margin-top: 12em;
+    }
+
+    .service_icons {
+        font-size: 3.8em;
+
+    }
+
     .services {
-        width: 100%;
+        width: 50%;
+        padding: 40px 20px;
+        border: 2px dashed transparent;
+        /* Set a transparent border */
+        border-radius: 4px;
+        /* Add border radius */
+        transition: border-color 0.3s ease, border-radius 0.3s ease;
     }
-}
+
+    .services:hover {
+        border-color: #fff;
+        /* Change the border color */
+        border-radius: 8px;
+        /* Adjust the border radius */
+    }
+
+    .services div {
+        text-align: center;
+    }
+
+    .how_to_points {
+        /* color: white !important; */
+        font-size: 1.1em;
+    }
+
+    .how_to_vote_icons {
+        margin-right: 10px;
+    }
+
+    .vote_icon {
+        font-size: 2.2em;
+    }
+
+    .animation-text {
+        /* bottom: 60% !important; */
+        animation: bottomFadeOut 2s ease-in-out;
+
+    }
+
+    @keyframes bottomFadeOut {
+        0% {
+            /* position: absolute; */
+            margin-top: 250px;
+            opacity: 0;
+        }
+
+        100% {
+            /* position: absolute; */
+            margin-top: 0rem;
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        /* CSS rules specific to mobile devices go here */
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .site_desc {
+            font-size: 1.4em;
+        }
+
+        .services {
+            width: 100%;
+        }
+    }
 </style>
 <div class="main-container animation-text">
     <div>
@@ -116,9 +127,17 @@ h4 {
             analytics. Get real-time insights, trends, and predictions about your favorite contestants!
         </p>
     </div>
-    <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5"
-            href="<?php echo base_url().'index.php/ml/Home' ?>">Malayalam</a></div>
+    <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5" href="<?php echo base_url() . 'index.php/ml/Home' ?>">Malayalam</a></div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
+    <!-- Add4 -->
+    <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
 </div>
+
 
 <div class="second-container">
     <div class="row page-titles">
@@ -275,14 +294,8 @@ h4 {
     </div>
 </div>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-9199579426500892"
-     data-ad-slot="5392822043"></ins>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block; height:150px !important;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9199579426500892" data-ad-slot="5392822043"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>

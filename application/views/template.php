@@ -687,7 +687,7 @@
             Header start
         ***********************************-->
 
-        <div class="header" style="background: linear-gradient(131.92deg, #002058 14.55%, #01072C 65.62%);">
+        <!-- <div class="header" style="background: linear-gradient(131.92deg, #002058 14.55%, #01072C 65.62%);">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
                     <div class="collapse navbar-collapse justify-content-between">
@@ -699,13 +699,15 @@
                             </a>
                         </div>
                     </div>
-                    <?php include 'header-1.php'; ?>
 
                 </nav>
             </div>
 
             
-        </div>
+        </div> -->
+
+        <?php include 'header-1.php'; ?>
+
 
         <!--**********************************
             Header end ti-comment-alt

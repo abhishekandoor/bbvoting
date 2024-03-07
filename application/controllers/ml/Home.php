@@ -22,4 +22,13 @@ class Home extends MY_Controller
         $this->template->write_view("content",'ml/results', $data);
         $this->template->load();
     }
+    function aboutus(){
+
+        $data =array();
+        // $data['contestants'] = $this->General->getdata('contestants','*');
+        $this->template->write_view("content",'ml/about-us', $data);
+        $this->template->load();
+        
+
+    }
 }

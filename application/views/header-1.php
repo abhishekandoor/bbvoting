@@ -1,119 +1,420 @@
 <style>
-    @import url("https://fonts.googleapis.com/css?family=Montserrat");
+    @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 
-    /* body {
-        margin: 0;
-        display: flex;
-        height: 100vh;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        font: 62.5% "Montserrat", sans-serif;
-        background-color: #201c29;
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAQAAAC00HvSAAAAqUlEQVR4AaXTIa7EMBBEwfrSAAODwAUfGBiY5P7H26XDIqXfAUrpseI520fcAf+itgEqgW4TMugoCKA2J4DanAQ6CgKozYmg44IMuhVk0FaQQceEDLoNyKBtQAZtExKozQkot7Dv37e42rqoaUk6Koe21ngJLYMManN6034xJzz2UnqvvugY+fNvIIOWIoW24aHnG20V/yJtTgAtAyKozQmgpURdLp+nOT9tfAyifaRWFwAAAABJRU5ErkJggg==);
+    /* Navbar section */
+
+    .nav {
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        line-height: 65px;
+        text-align: center;
     }
 
-    h1 {
-        transform: rotate(180deg);
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 2rem;
-        writing-mode: vertical-rl;
-        color: #ab49de;
-        background-image: linear-gradient(-90deg, #ab49de, #180622);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        user-select: none;
+    .nav div.logo {
+        float: left;
+        width: auto;
+        height: auto;
+        padding-left: 3rem;
+    }
+
+    .nav div.logo a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .nav div.logo a:hover {
+        color: #00e676;
+    }
+
+    .nav div.main_list {
+        height: 65px;
+        float: right;
+    }
+
+    .nav div.main_list ul {
+        width: 100%;
+        height: 65px;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav div.main_list ul li {
+        width: auto;
+        height: 65px;
+        padding: 0;
+        padding-right: 3rem;
+    }
+
+    .nav div.main_list ul li a {
+        text-decoration: none;
+        color: #fff;
+        line-height: 65px;
+        font-size: 1.5rem;
+    }
+
+    .nav div.main_list ul li a:hover {
+        color: #00e676;
+    }
+
+    /* Home section */
+
+    /* .home {
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+        background-position: center top;
+        background-size: cover;
     } */
 
-    .bar {
-        margin: 0;
-        padding: 1em;
-        display: flex;
-        min-width: 380px;
-        height: 100px;
-        justify-content: right;
-        align-items: center;
+    .navTrigger {
+        display: none;
     }
 
-    .bar li {
-        position: relative;
-        list-style: none;
-        border-radius: 1em;
+    .nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
     }
 
-    .bar li::before,
-    .bar li::after {
+    /* Media qurey section */
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .container {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .navTrigger {
+            display: block;
+        }
+
+        .nav div.logo {
+            margin-left: 15px;
+        }
+
+        .nav div.main_list {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .nav div.show_list {
+            height: auto;
+            display: none;
+        }
+
+        .nav div.main_list ul {
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #111;
+            /*same background color of navbar*/
+            background-position: center top;
+        }
+
+        .nav div.main_list ul li {
+            width: 100%;
+            text-align: right;
+        }
+
+        .nav div.main_list ul li a {
+            text-align: center;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+
+        .nav div.media_button {
+            display: block;
+        }
+    }
+
+    /* Animation */
+    /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+    .navTrigger {
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        margin: auto;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-        content: "";
-        width: 0%;
-        height: 2px;
-        background-color: #9525cf;
-        transition: all 0.5s cubic-bezier(0.4, -1, 0.2, -1);
-    }
-
-    .bar li:before {
+        right: 30px;
         top: 0;
-        border-top-right-radius: 0.5em;
-        border-top-left-radius: 0.5em;
-    }
-
-    .bar li::after {
         bottom: 0;
-        border-bottom-right-radius: 0.5em;
-        border-bottom-left-radius: 0.5em;
     }
 
-    .bar li:hover::before,
-    .bar li:hover::after {
-        width: 25%;
-        height: 3px;
-    }
-
-    .bar li a {
-        text-decoration: none;
-        text-transform: uppercase;
+    .navTrigger i {
+        background-color: #fff;
+        border-radius: 2px;
+        content: "";
         display: block;
-        padding: 0.5em 2em;
-        font-size: 1rem;
-        font-weight: 700;
-        color: #d39fee;
-    }
-
-    .bar li.active {
-        border-color: #370e4d;
-    }
-
-    .bar li.active::before,
-    .bar li.active::after {
         width: 100%;
-        height: 50%;
+        height: 4px;
+    }
+
+    .navTrigger i:nth-child(1) {
+        -webkit-animation: outT 0.8s backwards;
+        animation: outT 0.8s backwards;
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+
+    .navTrigger i:nth-child(2) {
+        margin: 5px 0;
+        -webkit-animation: outM 0.8s backwards;
+        animation: outM 0.8s backwards;
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+
+    .navTrigger i:nth-child(3) {
+        -webkit-animation: outBtm 0.8s backwards;
+        animation: outBtm 0.8s backwards;
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+
+    .navTrigger.active i:nth-child(1) {
+        -webkit-animation: inT 0.8s forwards;
+        animation: inT 0.8s forwards;
+    }
+
+    .navTrigger.active i:nth-child(2) {
+        -webkit-animation: inM 0.8s forwards;
+        animation: inM 0.8s forwards;
+    }
+
+    .navTrigger.active i:nth-child(3) {
+        -webkit-animation: inBtm 0.8s forwards;
+        animation: inBtm 0.8s forwards;
+    }
+
+    @-webkit-keyframes inM {
+        50% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(45deg);
+        }
+    }
+
+    @keyframes inM {
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @-webkit-keyframes outM {
+        50% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(45deg);
+        }
+    }
+
+    @keyframes outM {
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @-webkit-keyframes inT {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            -webkit-transform: translateY(9px) rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: translateY(9px) rotate(135deg);
+        }
+    }
+
+    @keyframes inT {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(9px) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(9px) rotate(135deg);
+        }
+    }
+
+    @-webkit-keyframes outT {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            -webkit-transform: translateY(9px) rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: translateY(9px) rotate(135deg);
+        }
+    }
+
+    @keyframes outT {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(9px) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(9px) rotate(135deg);
+        }
+    }
+
+    @-webkit-keyframes inBtm {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            -webkit-transform: translateY(-9px) rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: translateY(-9px) rotate(135deg);
+        }
+    }
+
+    @keyframes inBtm {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-9px) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-9px) rotate(135deg);
+        }
+    }
+
+    @-webkit-keyframes outBtm {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            -webkit-transform: translateY(-9px) rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: translateY(-9px) rotate(135deg);
+        }
+    }
+
+    @keyframes outBtm {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-9px) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-9px) rotate(135deg);
+        }
+    }
+
+    .affix {
+        padding: 0;
+        background-color: #111;
+    }
+
+    .myH2 {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .myP {
+        text-align: justify;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 20px;
+    }
+
+    @media all and (max-width: 700px) {
+        .myP {
+            padding: 2%;
+        }
     }
 </style>
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="<?php echo base_url(); ?>">Bbvoting.com</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                <!-- <li><a href="#">Portfolio</a></li> -->
+                <li><a href="<?php echo base_url('index.php/ml/Home/aboutus'); ?>">About</a></li>
+                <li><a href="<?php echo base_url('contact-us'); ?>">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
 
-<ul class="bar">
-    <li><a href="<?php echo base_url(); ?>" title="Click me">Home</a>
-    </li>
-    <li><a href="#" title="Click me">About</a>
-    </li>
-    <li><a href="<?php echo base_url() ?>contact-us" title="Click me">Contact</a>
-    </li>
-    <!-- <li><a href="#" title="Click me">Link</a> -->
-    </li>
-</ul>
+<section class="home">
+</section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-    let bar = Array.from(document.querySelectorAll("li"));
+    $(document).ready(function() {
+        var previousScroll = 0;
+        $(window).scroll(function() {
+            var currentScroll = $(this).scrollTop();
+            if (currentScroll > previousScroll) {
+                $('.nav').addClass('hide');
+            } else {
+                $('.nav').removeClass('hide');
+            }
+            previousScroll = currentScroll;
+        });
+    });
 
-    bar.forEach(function(it) {
-        it.onclick = function() {
-            bar.forEach(function(el) {
-                el.classList.remove("active");
-            });
-            this.classList.toggle("active");
-        };
+    $('.navTrigger').click(function() {
+        $(this).toggleClass('active');
+        $("#mainListDiv").toggleClass("show_list");
+        $("#mainListDiv").fadeIn();
     });
 </script>
