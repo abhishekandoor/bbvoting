@@ -58,4 +58,13 @@ class Home extends MY_Controller
         // Implement your own logic to validate IP address (e.g., check format, blacklists, etc.)
         return true; // Return true for demonstration purposes
     }
+    function aboutus(){
+
+        $data =array();
+        // $data['contestants'] = $this->General->getdata('contestants','*');
+        $this->template->write_view("content",'ml/about-us', $data);
+        $this->template->load();
+        
+
+    }
 }
