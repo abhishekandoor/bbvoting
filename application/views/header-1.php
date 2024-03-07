@@ -99,7 +99,7 @@
     </li>
     <li><a href="#" title="Click me">About</a>
     </li>
-    <li><a href="<?php echo base_url() ?>/conact-us" title="Click me">Contact</a>
+    <li><a href="<?php echo base_url() ?>contact-us" title="Click me">Contact</a>
     </li>
     <!-- <li><a href="#" title="Click me">Link</a> -->
     </li>
