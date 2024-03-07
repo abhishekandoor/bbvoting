@@ -116,12 +116,12 @@
                                 </span>
                                 <span class="voted_label">voted</span>
                                 <div>
-                                    <span class="total_percentage">60%
+                                    <span class="total_percentage">0%
                                     </span>
                                 </div>
         
                                 <div>
-                                    <span class="total_percentage">150000 <span class="votes_count_label"> votes</span>
+                                    <span class="total_percentage">0 <span class="votes_count_label"> votes</span>
                                     </span>
         
                                 </div>
