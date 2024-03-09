@@ -2,7 +2,7 @@
 
 </style>
 <div>
-        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - Week 1</h2>
+        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - <?php echo $week_name; ?></h2>
     </div>
 <?php 
 
@@ -27,7 +27,7 @@ foreach($contestants as $row){ ?>
                                 <h4 class="text-white"><?php echo $row['name'] ?></h4>
                         </div>
                         <div class="profession__div text-center">
-                            <h5 class="text-white" style="font-size:x-small;"><small><?php echo $row['profession'] ?></small></h5>
+                            <h5 class="text-white" style="font-size:1em;"><small><?php echo $row['profession'] ?></small></h5>
                         </div>
                     </div>
                 </div>
@@ -49,6 +49,10 @@ foreach($contestants as $row){ ?>
     </div>
 </div>
 <?php } ?>
+<form id="myForm" method="post" action="<?php echo base_url(); ?>index.php/ml/Home/success_page">
+<input type="hidden" name="csrf_saveMe" value="<?php echo $this->security->get_csrf_hash();?>">
+  <input type="hidden" id="formData" name="encoded_value" value="">
+</form>
 <script>// AJAX function to handle the voting
 function voteForContestant(contestantId) {
     // Get the contestant ID and IP address
@@ -66,7 +70,10 @@ function voteForContestant(contestantId) {
         },
         success: function(response) {
             // Handle success response
-            window.location.href = "<?php echo base_url(); ?>index.php/ml/Home/results";
+            var data = JSON.parse(response);
+            if(data.status == 'success'){
+                redirectWithPost();
+            }
         },
         error: function(xhr, status, error) {
             // Handle error
@@ -74,6 +81,11 @@ function voteForContestant(contestantId) {
         }
     });
 }
+function redirectWithPost() {
+    const formData = document.getElementById("formData");
+    formData.value = "MjI1NQ=="; // Set your data here
+    document.getElementById("myForm").submit();
+  }
 
 
 </script>

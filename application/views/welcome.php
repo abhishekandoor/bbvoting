@@ -127,7 +127,7 @@
             analytics. Get real-time insights, trends, and predictions about your favorite contestants!
         </p>
     </div>
-    <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5" href="<?php echo base_url() . 'index.php/ml/Home' ?>">Malayalam</a></div>
+    <div class="text-center"><a class="btn btn-outline-primary btn-rounded mt-3 px-5" href="<?php echo base_url() . 'index.php/ml/Home' ?>">Malayalam - Season 6</a></div>
 
 
 </div>

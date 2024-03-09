@@ -53,7 +53,7 @@
         text-decoration: none;
         color: #fff;
         line-height: 65px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .nav div.main_list ul li a:hover {
@@ -373,10 +373,10 @@
         }
     }
 </style>
-<nav class="nav">
-    <div class="container">
+<nav class="nav max-index p-0">
+    <div class="container custom-header">
         <div class="logo">
-            <a href="<?php echo base_url(); ?>">Bbvoting.com</a>
+            <a href="<?php echo base_url(); ?>">bbvoting.com</a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">

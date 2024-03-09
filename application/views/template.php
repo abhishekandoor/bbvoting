@@ -33,6 +33,14 @@
                 'GRAD' 0,
                 'opsz' 24
         }
+        .max-index{
+            z-index: 2147483647 !important;
+        }
+        .custom-header{
+            background: linear-gradient(131.92deg, #002058 14.55%, #01072C 95.62%);
+            min-width: 100%;
+            margin: 0;
+        }
     </style>
 
     <!-- GOOGLE ADDSENSE MAIN -->

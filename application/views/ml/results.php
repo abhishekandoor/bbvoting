@@ -73,11 +73,19 @@
 @media only screen and (max-width: 767px) {
   
     .trending_wrapper_child {
-        width: 100%;
-        padding:3em;
+        width: 32%;
+        /* padding:3em; */
+    }
+    .trending_number,.popular_number,.gamer_number{
+        font-size: 2em;
+    }
+    .second_container{
+        margin-top :8em;
     }
 }
 </style>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 <div class="main_container">
     <div>
         <h2 class="Result-heading">Result - <?php echo $week->week_name; ?></h2>
@@ -97,7 +105,7 @@
                 </div>
                 <div class="card-body border-0 pe-5">
                     <div class="main-div d-flex align-items-center justify-content-between">
-                        <div class="left__div">
+                        <div class="left__div w-100">
                             <div class="photo__div text-center">
                                 <img src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
                                     style="height: 8em;" />
@@ -107,16 +115,18 @@
                                     <h4 class="text-white"><?php echo $row['name'] ?></h4>
                                 </div>
                                 <div class="profession__div text-center">
-                                    <h5 class="text-white" style="font-size:x-small;"><small><?php echo $row['profession']; ?></small></h5>
+                                    <h5 class="text-white" style="font-size:1em;"><small><?php echo $row['profession']; ?></small></h5>
                                 </div>
                             </div>
                         </div>
                         <div class="right__div w-100 text-center">
                             <div class="voted_panel">
-                                <span class="material-symbols-outlined voted_icon">
-                                    verified
-                                </span>
-                                <span class="voted_label">voted</span>
+                                <?php if($voted_contestant_id == $row['id']){ ?>
+                                    <span class="material-symbols-outlined voted_icon">
+                                        verified
+                                    </span>
+                                    <span class="voted_label">voted</span>
+                                <?php } ?>
                                 <div>
                                     <span class="total_percentage"><?php echo round($total_percentage).'%'; ?>
                                     </span>
@@ -282,3 +292,7 @@
         </div>
     </div>
 </div>
+
+
+<script>
+</script>
