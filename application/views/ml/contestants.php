@@ -48,6 +48,9 @@ foreach($contestants as $row){ ?>
     </div>
 </div>
 <?php } ?>
+
+
+
 <form id="myForm" method="post" action="<?php echo base_url(); ?>index.php/ml/Home/success_page">
 <input type="hidden" name="csrf_saveMe" value="<?php echo $this->security->get_csrf_hash();?>">
   <input type="hidden" id="formData" name="encoded_value" value="">

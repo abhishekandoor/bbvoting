@@ -12,9 +12,10 @@ class Home extends MY_Controller
        
 
         $data =array();
-        
-        $data['contestants'] = $this->General->getdata('contestant','*');
-        $data['week_name'] = $week_name = $this->General->getrow('master_weeks','week_name',array('is_current'=>1))->week_name;
+        $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+        $data['week_name'] = $week_name = $week->week_name;
+        $week_id = $week->id;
+        $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id);
         $ipAddress = $this->input->ip_address();
         $data['page_title'] = 'Vote Your Favourite Contestant - '.$week_name;
 
@@ -44,7 +45,7 @@ class Home extends MY_Controller
         $ipAddress = $this->input->ip_address();
         if ($this->hasVotedToday($ipAddress)) {
             $data =array();
-            $data['contestants'] = $this->General->getdata('contestant','*');
+            // $data['contestants'] = $this->General->getdata('contestant','*');
 
             $data['week'] = $week_id = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
             $votes = $this->General->getdata('contestant_weekly_votes','contestant_id,vote_count',array('week_id'=>$week_id->id));
@@ -55,6 +56,8 @@ class Home extends MY_Controller
             $data['top_trending'] = $this->VM->getTopTrending();
             $data['top_popular'] = $this->VM->getTopPopular();
             $data['top_gamers'] = $this->VM->getTopGamers();
+            $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id->id);
+
             // echo '<pre>'; print_r($data['top_gamers']); echo '</pre>'; die;
             $currentDateTime = new DateTime(); // Get current datetime
             $interval = new DateInterval('PT210M'); // Create an interval of 210 minutes

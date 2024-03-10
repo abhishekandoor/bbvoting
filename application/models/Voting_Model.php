@@ -87,5 +87,14 @@ class Voting_Model extends CI_Model
         $data = $this->db->get()->result_array();
         return $data;
     }
+
+    function getNominatedContestantsByWeekId($week_id){
+        $this->db->select('C.name,C.profession,C.id');
+        $this->db->from('contestant_weekly_votes as CV');
+        $this->db->join('contestant as C','C.id = CV.contestant_id');
+        $this->db->where('CV.week_id',$week_id);
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
     
 }

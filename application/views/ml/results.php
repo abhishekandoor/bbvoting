@@ -65,7 +65,8 @@
     bottom: -0.6em;
 }
 .main_container{
-    min-height:100vh;
+    min-height:60vh;
+    margin-bottom:5em;
 }
 .fourth_container , .third_container , .second_container {
     margin-bottom : 10em;
@@ -78,6 +79,9 @@
     }
     .trending_number,.popular_number,.gamer_number{
         font-size: 2em;
+    }
+    .main_container{
+        margin-bottom:3em;
     }
     .second_container{
         margin-top :8em;
