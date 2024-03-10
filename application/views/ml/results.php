@@ -152,7 +152,7 @@
 </div>
 <div class="second_container">
     <div>
-        <h2 class="sub-heading">Top Trending Contestants-Week 2 
+        <h2 class="sub-heading">Top Trending Contestants
 
             <small style="float:right;font-size:.5em;">*Based on Social Media AI Analysis</small>
         </h2>
@@ -203,7 +203,7 @@
 
 <div class="third_container">
     <div>
-        <h2 class="sub-heading">Top Popular Contestants-Week 2</h2>
+        <h2 class="sub-heading">Top Popular Contestants - <?php echo $week->week_name; ?></h2>
     </div>
     <div class="trending_wrapper row">
         <div class="trending_wrapper_child">
@@ -252,7 +252,7 @@
 
 <div class="fourth_container">
     <div>
-        <h2 class="sub-heading">Top Gamers- Week 2</h2>
+        <h2 class="sub-heading">Top Gamers - <?php echo $week->week_name; ?></h2>
     </div>
     <div class="trending_wrapper row">
         <div class="trending_wrapper_child">
