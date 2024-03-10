@@ -82,14 +82,16 @@
     .second_container{
         margin-top :8em;
     }
+    .sub-heading{
+        display: flex;
+    flex-direction: column;
+    }
 }
 </style>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <div class="main_container">
-    <div>
-        <h2 class="Result-heading">Result - <?php echo $week->week_name; ?></h2>
-    </div>
+    <?php $this->load->view('back_button'); ?>
     <div class="row">
         <?php foreach($contestants as $row){
             $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
@@ -150,7 +152,10 @@
 </div>
 <div class="second_container">
     <div>
-        <h2 class="sub-heading">Top Trending Contestants-Week 2</h2>
+        <h2 class="sub-heading">Top Trending Contestants-Week 2 
+
+            <small style="float:right;font-size:.5em;">*Based on Social Media AI Analysis</small>
+        </h2>
     </div>
     <div class="trending_wrapper row">
         <div class="trending_wrapper_child">

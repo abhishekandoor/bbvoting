@@ -1,9 +1,8 @@
 <style>
 
 </style>
-<div>
-        <h2 class="sub-heading text-white">Vote Your Favourite Contestant - <?php echo $week_name; ?></h2>
-    </div>
+<?php $this->load->view('back_button'); ?>
+
 <?php 
 
 foreach($contestants as $row){ ?>

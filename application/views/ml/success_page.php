@@ -15,7 +15,7 @@
 .countdown{
     text-align:center;
 }
-.main-container{
+.main_container{
     align-items:center;
 }
 
@@ -73,7 +73,7 @@
         flex-direction : column;
         align-items:center;
     }
-    .main-container{
+    .main_container{
         align-items:start;
     }
 }

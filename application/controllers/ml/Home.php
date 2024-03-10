@@ -12,9 +12,11 @@ class Home extends MY_Controller
        
 
         $data =array();
+        
         $data['contestants'] = $this->General->getdata('contestant','*');
-        $data['week_name'] = $week_id = $this->General->getrow('master_weeks','week_name',array('is_current'=>1))->week_name;
+        $data['week_name'] = $week_name = $this->General->getrow('master_weeks','week_name',array('is_current'=>1))->week_name;
         $ipAddress = $this->input->ip_address();
+        $data['page_title'] = 'Vote Your Favourite Contestant - '.$week_name;
 
             // Check if the user has already voted today
             if ($this->hasVotedToday($ipAddress)) {
@@ -49,7 +51,7 @@ class Home extends MY_Controller
             $data['total_weekly_vote'] = $this->General->getrow('contestant_weekly_votes','sum(vote_count) as total_votes',array('week_id'=>$week_id->id))->total_votes;
             $data['votes_array'] = arrayKeySetter($votes,'contestant_id');
             $data['voted_contestant_id'] = $this->General->getrow('vote_details','contestant_id',array('week_id'=>$week_id->id,'ip_address'=>$ipAddress))->contestant_id;
-
+            $data['page_title'] = 'Result - '.$week_id->week_name;
             $this->template->write_view("content",'ml/results', $data);
             $this->template->load();
         }else{
@@ -114,5 +116,14 @@ class Home extends MY_Controller
         $this->template->load();
         
 
+    }
+
+    function all_contestants(){
+        $data =array();
+        $data['page_title'] = 'All Contestants';
+
+        $data['contestants'] = $this->General->getdata('contestant','*');
+        $this->template->write_view("content",'ml/all_contestants', $data);
+        $this->template->load();
     }
 }
