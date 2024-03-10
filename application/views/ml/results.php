@@ -55,7 +55,9 @@
     font-style: italic;
     bottom: -0.6em;
 }
-.popular_number , .gamer_number{
+
+.popular_number,
+.gamer_number {
     right: -0.15em;
     font-size: 5em;
     color: yellow;
@@ -64,37 +66,59 @@
     font-style: italic;
     bottom: -0.6em;
 }
-.main_container{
-    min-height:60vh;
-    margin-bottom:5em;
+
+.main_container {
+    min-height: 60vh;
+    margin-bottom: 5em;
 }
-.fourth_container , .third_container , .second_container {
-    margin-bottom : 10em;
+
+.fourth_container,
+.third_container,
+.second_container {
+    margin-bottom: 10em;
 }
+
 @media only screen and (max-width: 767px) {
-  
+
     .trending_wrapper_child {
         width: 32%;
         /* padding:3em; */
     }
-    .trending_number,.popular_number,.gamer_number{
+
+    .trending_number,
+    .popular_number,
+    .gamer_number {
         font-size: 2em;
     }
-    .main_container{
-        margin-bottom:3em;
+
+    .main_container {
+        margin-bottom: 3em;
     }
-    .second_container{
-        margin-top :8em;
+
+    .second_container {
+        margin-top: 8em;
     }
-    .sub-heading{
+
+    .sub-heading {
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
     }
 }
 </style>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <div class="main_container">
+    <!-- <div class="text-center vote_panel">
+        <button type="button" onclick="saveResults();" class="btn btn-rounded btn-secondary" style="
+    background: yellow;
+    color: #000;
+"><span class="btn-icon-start text-warning" style="
+    background: #000;
+    color: yellow;
+"><i class="fa fa-download " style="color: yellow;"></i>
+            </span>Download Result as Image</button>
+    </div> -->
+
     <?php $this->load->view('back_button'); ?>
     <div class="row">
         <?php foreach($contestants as $row){
@@ -121,33 +145,36 @@
                                     <h4 class="text-white"><?php echo $row['name'] ?></h4>
                                 </div>
                                 <div class="profession__div text-center">
-                                    <h5 class="text-white" style="font-size:1em;"><small><?php echo $row['profession']; ?></small></h5>
+                                    <h5 class="text-white" style="font-size:1em;">
+                                        <small><?php echo $row['profession']; ?></small></h5>
                                 </div>
                             </div>
                         </div>
                         <div class="right__div w-100 text-center">
                             <div class="voted_panel">
                                 <?php if($voted_contestant_id == $row['id']){ ?>
-                                    <span class="material-symbols-outlined voted_icon">
-                                        verified
-                                    </span>
-                                    <span class="voted_label">voted</span>
+                                <span class="material-symbols-outlined voted_icon">
+                                    verified
+                                </span>
+                                <span class="voted_label">voted</span>
                                 <?php } ?>
                                 <div>
                                     <span class="total_percentage"><?php echo round($total_percentage).'%'; ?>
                                     </span>
                                 </div>
-        
+
                                 <div>
-                                    <span class="total_percentage"><?php echo $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0 ?> <span class="votes_count_label"> votes</span>
+                                    <span
+                                        class="total_percentage"><?php echo $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0 ?>
+                                        <span class="votes_count_label"> votes</span>
                                     </span>
-        
+
                                 </div>
-        
+
                             </div>
                         </div>
                     </div>
-        
+
                 </div>
             </div>
         </div>
@@ -159,8 +186,8 @@
         <h2 class="sub-heading">Top Trending Contestants
 
             <small style="float:right;font-size:.5em;display:flex;flex-direction: column;align-items: end;">
-                    <span>*Based on Social Media AI Analysis</span>
-                    <small >Last Updated on <?php echo $last_updated; ?></small>
+                <span>*Based on Social Media AI Analysis</span>
+                <small>Last Updated on <?php echo $last_updated; ?></small>
             </small>
         </h2>
     </div>
@@ -178,7 +205,7 @@
                     <span class="trending_number">
                         <span style="font-weight: 600;">#</span><?php echo $row['trending_number']; ?>
                     </span>
-    
+
                 </div>
             </div>
         </div>
@@ -186,8 +213,8 @@
         }else{
             echo '<div class="text-center text-danger">No Data Found!</div>';
         } ?>
-        
-        
+
+
     </div>
 </div>
 
@@ -200,26 +227,26 @@
         if(count($top_popular) > 0){
             foreach($top_popular as $row){ ?>
 
-            <div class="trending_wrapper_child">
-                <div class="card">
-                    <img class="card-img-top img-fluid"
-                        src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                        alt="Card image cap">
-                    <div class="card-header">
-                        <h5 class="card-title"><?php echo $row['name']; ?></h5>
-                        <span class="popular_number">
-                            <span style="font-weight: 600;"></span><?php echo $row['popular_number']; ?>
-                        </span>
-        
-                    </div>
+        <div class="trending_wrapper_child">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
+                    alt="Card image cap">
+                <div class="card-header">
+                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                    <span class="popular_number">
+                        <span style="font-weight: 600;"></span><?php echo $row['popular_number']; ?>
+                    </span>
+
                 </div>
             </div>
-            <?php }
+        </div>
+        <?php }
         }else{
             echo '<div class="text-center text-danger">No Data Found!</div>';
         } ?>
-       
-        
+
+
     </div>
 </div>
 
@@ -242,7 +269,7 @@
                     <span class="gamer_number">
                         <span style="font-weight: 600;"></span><?php echo $row['position_number']; ?>
                     </span>
-    
+
                 </div>
             </div>
         </div>
@@ -253,6 +280,45 @@
     </div>
 </div>
 
+<div class="modal fade" id="result_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+            <?php foreach($contestants as $row){
+            $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
+            $total_percentage = $votes/$total_weekly_vote*100;
+            ?>
+                <h6 class="mt-4">Code editor
+                    <span class="pull-end">90%</span>
+                </h6>
+                <div class="progress">
+                    <div class="progress-bar bg-info progress-animated" style="width: 90%; height:6px;" role="progressbar">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+            <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
+$(document).ready(function() {
+    $('#downloadBtn').click(function() {
+        html2canvas($('#htmlContent')[0]).then(function(canvas) {
+            var imageData = canvas.toDataURL("image/png");
+            var downloadLink = document.createElement("a");
+            downloadLink.href = imageData;
+            downloadLink.download = 'converted_image.png';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+    });
+});
+
+function saveResults() {
+    $('#result_modal').modal('show');
+}
 </script>
