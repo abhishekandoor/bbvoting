@@ -57,5 +57,35 @@ class Voting_Model extends CI_Model
             return 1;
         }
     }
+
+    function getTopTrending(){
+        $this->db->select('name,trending_number');
+        $this->db->from('top_trending as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->order_by('trending_number');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+
+    function getTopPopular(){
+        $this->db->select('name,popular_number');
+        $this->db->from('top_popular as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->order_by('popular_number');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+
+    function getTopGamers(){
+        $this->db->select('name,position_number');
+        $this->db->from('top_gamers as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->order_by('position_number');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
     
 }

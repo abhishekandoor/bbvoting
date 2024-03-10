@@ -154,50 +154,36 @@
     <div>
         <h2 class="sub-heading">Top Trending Contestants
 
-            <small style="float:right;font-size:.5em;">*Based on Social Media AI Analysis</small>
+            <small style="float:right;font-size:.5em;display:flex;flex-direction: column;align-items: end;">
+                    <span>*Based on Social Media AI Analysis</span>
+                    <small >Last Updated on <?php echo $last_updated; ?></small>
+            </small>
         </h2>
     </div>
     <div class="trending_wrapper row">
+        <?php 
+          if(count($top_trending) > 0){
+        foreach($top_trending as $row){ ?>
         <div class="trending_wrapper_child">
             <div class="card">
                 <img class="card-img-top img-fluid"
                     src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
                     alt="Card image cap">
                 <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
                     <span class="trending_number">
-                        <span style="font-weight: 600;">#</span>1
+                        <span style="font-weight: 600;">#</span><?php echo $row['trending_number']; ?>
                     </span>
     
                 </div>
             </div>
         </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="trending_number">
-                        <span style="font-weight: 600;">#</span>2
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="trending_number">
-                        <span style="font-weight: 600;">#</span>3
-                    </span>
-                </div>
-            </div>
-        </div>
+        <?php }
+        }else{
+            echo '<div class="text-center text-danger">No Data Found!</div>';
+        } ?>
+        
+        
     </div>
 </div>
 
@@ -206,46 +192,30 @@
         <h2 class="sub-heading">Top Popular Contestants - <?php echo $week->week_name; ?></h2>
     </div>
     <div class="trending_wrapper row">
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="popular_number">
-                        <span style="font-weight: 600;"></span>1
-                    </span>
-    
+        <?php 
+        if(count($top_popular) > 0){
+            foreach($top_popular as $row){ ?>
+
+            <div class="trending_wrapper_child">
+                <div class="card">
+                    <img class="card-img-top img-fluid"
+                        src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
+                        alt="Card image cap">
+                    <div class="card-header">
+                        <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                        <span class="popular_number">
+                            <span style="font-weight: 600;"></span><?php echo $row['popular_number']; ?>
+                        </span>
+        
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="popular_number">
-                        <span style="font-weight: 600;"><Trending/span>2
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="popular_number">
-                        <span style="font-weight: 600;"></span>3
-                    </span>
-                </div>
-            </div>
-        </div>
+            <?php }
+        }else{
+            echo '<div class="text-center text-danger">No Data Found!</div>';
+        } ?>
+       
+        
     </div>
 </div>
 
@@ -255,46 +225,27 @@
         <h2 class="sub-heading">Top Gamers - <?php echo $week->week_name; ?></h2>
     </div>
     <div class="trending_wrapper row">
+        <?php  
+        if(count($top_gamers) > 0){
+        foreach($top_gamers as $row){ ?>
         <div class="trending_wrapper_child">
             <div class="card">
                 <img class="card-img-top img-fluid"
                     src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
                     alt="Card image cap">
                 <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
                     <span class="gamer_number">
-                        <span style="font-weight: 600;"></span>1
+                        <span style="font-weight: 600;"></span><?php echo $row['position_number']; ?>
                     </span>
     
                 </div>
             </div>
         </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="gamer_number">
-                        <span style="font-weight: 600;"><Trending/span>2
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title">Card title</h5>
-                    <span class="gamer_number">
-                        <span style="font-weight: 600;"></span>3
-                    </span>
-                </div>
-            </div>
-        </div>
+        <?php }
+        }else{
+            echo '<div class="text-center text-danger">No Data Found!</div>';
+        } ?>
     </div>
 </div>
 

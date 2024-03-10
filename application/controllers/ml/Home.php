@@ -52,6 +52,14 @@ class Home extends MY_Controller
             $data['votes_array'] = arrayKeySetter($votes,'contestant_id');
             $data['voted_contestant_id'] = $this->General->getrow('vote_details','contestant_id',array('week_id'=>$week_id->id,'ip_address'=>$ipAddress))->contestant_id;
             $data['page_title'] = 'Result - '.$week_id->week_name;
+            $data['top_trending'] = $this->VM->getTopTrending();
+            $data['top_popular'] = $this->VM->getTopPopular();
+            $data['top_gamers'] = $this->VM->getTopGamers();
+            // echo '<pre>'; print_r($data['top_gamers']); echo '</pre>'; die;
+            $currentDateTime = new DateTime(); // Get current datetime
+            $interval = new DateInterval('PT210M'); // Create an interval of 210 minutes
+            $currentDateTime->sub($interval); // Subtract the interval from the current datetime
+            $data['last_updated'] = $currentDateTime->format('M d Y h:i A'); // Output the result in desired format with AM/PM indicator
             $this->template->write_view("content",'ml/results', $data);
             $this->template->load();
         }else{
