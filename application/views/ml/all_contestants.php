@@ -46,11 +46,11 @@ foreach($contestants as $row){ ?>
             </div>
             <div class="me-3 third_container">
                 <p class="fs-14 mb-1">Age</p>
-                <span class=" font-w500 fs-16"><?php echo '27'; ?></span>
+                <span class=" font-w500 fs-16"><?php echo '--'; ?></span>
             </div>
             <div class="me-3 fourth_container">
                 <p class="fs-14 mb-1">Wage/Day</p>
-                <span class=" font-w500 fs-16">25000</span>
+                <span class=" font-w500 fs-16">₹xx000</span>
             </div>
             <div class="me-3 fifth_container">
                 <p class="fs-14 mb-1">Status</p>
