@@ -59,7 +59,7 @@ class Voting_Model extends CI_Model
     }
 
     function getTopTrending(){
-        $this->db->select('name,trending_number');
+        $this->db->select('name,trending_number,photo_url');
         $this->db->from('top_trending as T');
         $this->db->join('contestant as C','C.id = T.contestant_id');
         $this->db->where('T.is_active',1);
@@ -69,7 +69,7 @@ class Voting_Model extends CI_Model
     }
 
     function getTopPopular(){
-        $this->db->select('name,popular_number');
+        $this->db->select('name,popular_number,photo_url');
         $this->db->from('top_popular as T');
         $this->db->join('contestant as C','C.id = T.contestant_id');
         $this->db->where('T.is_active',1);
@@ -79,7 +79,7 @@ class Voting_Model extends CI_Model
     }
 
     function getTopGamers(){
-        $this->db->select('name,position_number');
+        $this->db->select('name,position_number,photo_url');
         $this->db->from('top_gamers as T');
         $this->db->join('contestant as C','C.id = T.contestant_id');
         $this->db->where('T.is_active',1);
@@ -89,7 +89,7 @@ class Voting_Model extends CI_Model
     }
 
     function getNominatedContestantsByWeekId($week_id){
-        $this->db->select('C.name,C.profession,C.id');
+        $this->db->select('C.name,C.profession,C.id,C.photo_url');
         $this->db->from('contestant_weekly_votes as CV');
         $this->db->join('contestant as C','C.id = CV.contestant_id');
         $this->db->where('CV.week_id',$week_id);
