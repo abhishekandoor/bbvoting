@@ -11,10 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="bbvoting.com : biggboss unofficial voting platform">
     <meta property="og:title" content="bbvoting.com : biggboss unofficial voting platform">
-    <meta property="og:description" content="bbvoting.com : biggboss unofficial voting platform">
-    <meta property="og:image" content="social-image.png">
+    <meta property="og:description" content="bbvoting.com : Biggboss unofficial voting platform">
+    <meta property="og:image" content="<?php echo base_url().'/uploads/og_image.png' ?>">
+    <meta property="og:url" content="www.bbvoting.com">
     <meta name="format-detection" content="telephone=no">
-    <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6, biggboss contestants, biggboss updates">
+    <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6,biggboss malayalam,,biggboss malayalam voting, biggboss contestants, biggboss updates">
     <meta name="google-adsense-account" content="ca-pub-9199579426500892">
     <!-- PAGE TITLE HERE -->
     <title>biggboss | biggboss unofficalvoting | biggboss unofficial voting platform</title>
