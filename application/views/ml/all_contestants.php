@@ -37,16 +37,16 @@ foreach($contestants as $row){ ?>
                 <img src="https://cdn.pixabay.com/photo/2016/05/28/05/40/question-mark-1421017_960_720.png" alt="" class="rounded me-3 card-list-img" width="50">
                 <div class="me-3">
                     <p class="fs-14 mb-1">Name</p>
-                    <span class=" font-w500 fs-16"><?php echo $row['name'] ?></span>
+                    <span class=" font-w500 fs-16"><?php echo $row['name']; ?></span>
                 </div>
             </div>
             <div class="me-3  second_container">
                 <p class="fs-14 mb-1">Profession</p>
-                <span class=" font-w500 fs-16"><?php echo $row['profession'] ?></span>
+                <span class=" font-w500 fs-16"><?php echo $row['profession']; ?></span>
             </div>
             <div class="me-3 third_container">
                 <p class="fs-14 mb-1">Age</p>
-                <span class=" font-w500 fs-16"><?php echo '--'; ?></span>
+                <span class=" font-w500 fs-16"><?php echo $row['age']; ?></span>
             </div>
             <div class="me-3 fourth_container">
                 <p class="fs-14 mb-1">Wage/Day</p>
