@@ -147,7 +147,7 @@
     if($today_vote_count > 0 && $today_vote_count < VOTE_LIMIT){
         $remaining = VOTE_LIMIT-$today_vote_count;
         ?>
-    <div class="text-center">
+    <div class="text-center mb-5">
         <a href="<?php echo base_url().'index.php/ml/Home/'; ?>" type="button" class="btn btn-rounded btn-info"><span
                 class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
             </span>Vote Again ( You have <?php echo $remaining ?> votes left for today )</a>
