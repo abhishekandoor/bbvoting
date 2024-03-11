@@ -12,7 +12,7 @@
     <meta name="description" content="bbvoting.com : biggboss unofficial voting platform">
     <meta property="og:title" content="bbvoting.com : biggboss unofficial voting platform">
     <meta property="og:description" content="bbvoting.com : Biggboss unofficial voting platform">
-    <meta property="og:image" content="<?php echo base_url().'/uploads/og_image.png' ?>">
+    <meta property="og:image" content="<?php echo base_url() . '/uploads/og_image.png' ?>">
     <meta property="og:url" content="www.bbvoting.com">
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6,biggboss malayalam,,biggboss malayalam voting, biggboss contestants, biggboss updates">
@@ -34,10 +34,12 @@
                 'GRAD' 0,
                 'opsz' 24
         }
-        .max-index{
+
+        .max-index {
             z-index: 2147483647 !important;
         }
-        .custom-header{
+
+        .custom-header {
             background: linear-gradient(131.92deg, #002058 14.55%, #01072C 95.62%);
             min-width: 100%;
             margin: 0;
@@ -47,6 +49,21 @@
     <!-- GOOGLE ADDSENSE MAIN -->
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN9085MVTP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EN9085MVTP');
+    </script>
+
 
 </head>
 
@@ -997,12 +1014,8 @@
                 <div class="row">
                     <div class="col-xl-2">
 
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
-                        <!-- Add4 -->
-                        <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        <!-- ADD goes Here-->
+
                     </div>
                     <div class="col-xl-8">
                         <div class="row">
@@ -1012,12 +1025,8 @@
 
                     <div class="col-xl-2">
 
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9199579426500892" crossorigin="anonymous"></script>
-                        <!-- Add4 -->
-                        <ins class="adsbygoogle" style="display:block;height:150px !important;" data-ad-client="ca-pub-9199579426500892" data-ad-slot="9720995584" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        <!-- ADD goes Here-->
+
                     </div>
 
                 </div>
@@ -1068,7 +1077,6 @@
     <script src="<?php echo base_url(); ?>assets/js/styleSwitcher.js"></script>
     <script>
         var csrf_token = '<?php echo $this->security->get_csrf_hash(); ?>';
-
     </script>
 
 
