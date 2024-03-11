@@ -90,7 +90,7 @@
                         stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
                 </svg>
             </div>
-            <span class="voted_msg">You have voted successfully. You can vote again the next day.</span>
+            <span class="voted_msg">You have voted successfully..!</span>
         </div>
         <div class="countdown" id="countdown">Redirecting in 5 seconds...</div>
     </div>

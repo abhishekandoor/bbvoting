@@ -35,11 +35,14 @@ foreach($contestants as $row){ ?>
                     flex-direction: column;
                     align-items: center;">
                         <div class="send m-auto bg-white">
-                            <a href="#" onclick="voteForContestant(<?php echo $row['id'] ?>);">
+                            <!-- <a href="#" onclick="voteForContestant(<?php echo $row['id'] ?>);">
                                 <img src="<?php echo base_url().'assets/icons/vote2.png'; ?>" style="margin-bottom:5px;"/>
+                            </a> -->
+                            <a href="#" type="button" onclick="voteForContestant(<?php echo $row['id'] ?>);" class="btn btn-info">Vote <span
+                            class="btn-icon-end"><i class="fa fa-heart"></i></span>
                             </a>
                         </div>
-                        <span>Vote</span>
+                        <!-- <span>Vote</span> -->
                     </div>
                 </div>
             </div>
@@ -61,7 +64,10 @@ function voteForContestant(contestantId) {
     var ipAddress = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
     // Encrypt the contestant ID (you can use any encryption method here)
     var encryptedContestantId = btoa(contestantId);
-
+    // setTimeout(function() {
+	// 		jQuery('#preloader').remove();
+	// 		$('#main-wrapper').addClass('show');
+	// 	},800);	
     // AJAX request
     $.ajax({
         type: "POST",

@@ -76,6 +76,15 @@ class Home extends MY_Controller
             return;
         }
     }
+    function go_back(){
+        $ipAddress = $this->input->ip_address();
+        $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
+        if ($data['today_vote_count'] < VOTE_LIMIT) {
+            redirect('ml/Home');
+        }elseif($data['today_vote_count'] == VOTE_LIMIT){
+            redirect('ml/Home/all_contestants');
+        }
+    }
     public function vote() {
         // Get the encrypted contestant ID and IP address from the AJAX request
         $encryptedContestantId = $this->input->post('contestant_id');

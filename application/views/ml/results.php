@@ -39,11 +39,12 @@
 
 .trending_wrapper {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .trending_wrapper_child {
     width: 25%;
+    margin-right:5em;
 }
 
 .trending_number {
@@ -74,15 +75,39 @@
 
 .fourth_container,
 .third_container,
-.second_container {
+.second_container,.table-view-container {
     margin-bottom: 10em;
 }
+.contestant_name_label{
+    font-weight:500 !important;
+}
+.back_wrapper{
+        display: flex;
+        align-items: baseline;
+    }
+    .back_btn{
+        margin-right:1em;
+        color: #fff;
+        cursor:pointer;
+    }
+    .Result-heading{
+        color:#fff;
+    }
+
 
 @media only screen and (max-width: 767px) {
+      .back_wrapper{
+            align-items: center;
+        }
 
     .trending_wrapper_child {
-        width: 32%;
+        width: 48%;
+        margin-right:0em;
         /* padding:3em; */
+    }
+    .contestant_name_label{
+        font-weight:500 !important;
+        font-size:1em !important;
     }
 
     .trending_number,
@@ -122,18 +147,27 @@
     if($today_vote_count > 0 && $today_vote_count < VOTE_LIMIT){
         $remaining = VOTE_LIMIT-$today_vote_count;
         ?>
-        <div class="text-center">
+    <div class="text-center">
         <a href="<?php echo base_url().'index.php/ml/Home/'; ?>" type="button" class="btn btn-rounded btn-info"><span
-            class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
-        </span>Vote Again ( You have <?php echo $remaining ?> votes left for today )</a>
-        </div>
+                class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
+            </span>Vote Again ( You have <?php echo $remaining ?> votes left for today )</a>
+    </div>
     <?php }else{ ?>
-        <div class="text-center p-5" style="font-size:1.2em">
-            <label class="text-warning">Alert: Your vote limit has been exceeded. Please come back and vote again tomorrow!</label>
-        </div>
+    <div class="text-center p-5" style="font-size:1.2em">
+        <label class="text-warning">Alert: Your vote limit has been exceeded. Please come back and vote again
+            tomorrow!</label>
+    </div>
     <?php } ?>
 
-    <?php $this->load->view('back_button'); ?>
+    <?php //$this->load->view('back_button'); ?>
+    <div class="back_wrapper">
+        <a class="back_btn" href="<?php echo base_url().'index.php/ml/Home/go_back'; ?>">
+            <span class="material-symbols-outlined">
+            keyboard_backspace
+            </span>
+        </a>
+        <h2 class="Result-heading"><?php echo $page_title; ?></h2>
+    </div>
     <div class="row">
         <?php foreach($contestants as $row){
             $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
@@ -151,8 +185,7 @@
                     <div class="main-div d-flex align-items-center justify-content-between">
                         <div class="left__div w-100">
                             <div class="photo__div text-center">
-                                <img src='<?php echo base_url().'/'.$row['photo_url']; ?>'
-                                    style="height: 8em;" />
+                                <img src='<?php echo base_url().'/'.$row['photo_url']; ?>' style="height: 8em;" />
                             </div>
                             <div class="title__div text-center">
                                 <div class="name__div">
@@ -160,7 +193,8 @@
                                 </div>
                                 <div class="profession__div text-center">
                                     <h5 class="text-white" style="font-size:1em;">
-                                        <small><?php echo $row['profession']; ?></small></h5>
+                                        <small><?php echo $row['profession']; ?></small>
+                                    </h5>
                                 </div>
                             </div>
                         </div>
@@ -196,6 +230,54 @@
         <?php } ?>
     </div>
 </div>
+
+<div class="table-view-container">
+    <div class="card">
+        <div class="card-header d-sm-flex d-block border-1">
+            <!-- <div class="me-auto mb-sm-0 mb-4">
+                <h4 class="fs-18 text-white">Vote Result - <?php echo $week->week_name; ?>  <span style="color:yellow;margin-left:2em;">bbvoting.com</span></h4>
+            </div> -->
+            <div class="d-flex justify-content-between w-100">
+                <h4 class="fs-18 text-white">Vote Result - <?php echo $week->week_name; ?></h4>
+                <span class="fs-18 " style="color:yellow;margin-left:2em;">bbvoting.com</span>
+            </div>
+            <!-- <div class="add-btn me-2">
+            <button type="button" onclick="saveResults();" class="btn btn-rounded btn-secondary" style="
+    background: yellow;
+    color: #000;
+"><span class="btn-icon-start text-warning" style="
+    background: #000;
+    color: yellow;
+"><i class="fa fa-download " style="color: yellow;"></i>
+            </span>Download Result as Image</button>
+            </div> -->
+        </div>
+        <div class="card-body pb-4 pt-2">
+            <?php 
+            $total_votes = 0;
+            foreach($contestants as $row){
+
+            $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
+            $total_percentage = $votes/$total_weekly_vote*100;
+            ?>
+            <h6 class="mt-1 text-white"><?php echo $row['name'] ?>
+                <span class="pull-right" style="float:right;"><?php echo $votes.' votes'; ?></span>
+            </h6>
+            <div class="progress-bar bg-warning active progress-bar-striped" style="width: <?php echo round($total_percentage).'%'; ?>; height:14px;" role="progressbar">
+                <span class="sr-only"><?php echo round($total_percentage).'%'; ?></span>
+            </div>
+            <hr/>
+            <?php 
+            $total_votes += $votes;
+        } ?>
+            <h6 class="mt-1 text-white">Total
+                <span class="pull-right" style="float:right;"><?php echo $total_votes.' votes'; ?></span>
+            </h6>
+        </div>
+    </div>
+
+</div>
+
 <div class="second_container">
     <div>
         <h2 class="sub-heading">Top Trending Contestants
@@ -212,11 +294,10 @@
         foreach($top_trending as $row){ ?>
         <div class="trending_wrapper_child">
             <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='<?php echo base_url().'/'.$row['photo_url']; ?>'
+                <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
                     alt="Card image cap">
                 <div class="card-header">
-                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                    <h5 class="card-title contestant_name_label"><?php echo $row['name']; ?></h5>
                     <span class="trending_number">
                         <span style="font-weight: 600;">#</span><?php echo $row['trending_number']; ?>
                     </span>
@@ -244,11 +325,10 @@
 
         <div class="trending_wrapper_child">
             <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='<?php echo base_url().'/'.$row['photo_url']; ?>'
+                <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
                     alt="Card image cap">
                 <div class="card-header">
-                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                    <h5 class="card-title contestant_name_label"><?php echo $row['name']; ?></h5>
                     <span class="popular_number">
                         <span style="font-weight: 600;"></span><?php echo $row['popular_number']; ?>
                     </span>
@@ -276,11 +356,10 @@
         foreach($top_gamers as $row){ ?>
         <div class="trending_wrapper_child">
             <div class="card">
-                <img class="card-img-top img-fluid"
-                    src='<?php echo base_url().'/'.$row['photo_url']; ?>'
+                <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
                     alt="Card image cap">
                 <div class="card-header">
-                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                    <h5 class="card-title contestant_name_label"><?php echo $row['name']; ?></h5>
                     <span class="gamer_number">
                         <span style="font-weight: 600;"></span><?php echo $row['position_number']; ?>
                     </span>
@@ -299,7 +378,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-            <?php foreach($contestants as $row){
+                <?php foreach($contestants as $row){
             $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
             $total_percentage = $votes/$total_weekly_vote*100;
             ?>
@@ -307,11 +386,12 @@
                     <span class="pull-end">90%</span>
                 </h6>
                 <div class="progress">
-                    <div class="progress-bar bg-info progress-animated" style="width: 90%; height:6px;" role="progressbar">
+                    <div class="progress-bar bg-info progress-animated" style="width: 90%; height:6px;"
+                        role="progressbar">
                         <span class="sr-only">60% Complete</span>
                     </div>
                 </div>
-            <?php } ?>
+                <?php } ?>
             </div>
         </div>
     </div>

@@ -25061,11 +25061,11 @@ a:hover {
   position: relative;
   overflow: hidden; }
   .wallet .send {
-    width: 3.125rem;
-    height: 3.125rem;
+    /* width: 3.125rem; */
+    /* height: 3.125rem; */
     border-radius: 0.938rem;
     text-align: center;
-    line-height: 3.125rem;
+    /* line-height: 3.125rem; */
     background-color: rgba(255, 255, 255, 0.1);
     transition-duration: 2s;
     position: relative;

@@ -24,7 +24,7 @@
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/<?php echo base_url(); ?>assets/images/favicon.png">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-autocomplete/jquery-ui.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/style.css?v1" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         .material-symbols-outlined {
