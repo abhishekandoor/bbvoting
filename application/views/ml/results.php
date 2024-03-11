@@ -121,7 +121,7 @@
     }
 
     .second_container {
-        margin-top: 2em;
+        /* margin-top: 2em; */
     }
 
     .sub-heading {
