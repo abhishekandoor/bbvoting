@@ -118,6 +118,20 @@
 "><i class="fa fa-download " style="color: yellow;"></i>
             </span>Download Result as Image</button>
     </div> -->
+    <?php 
+    if($today_vote_count > 0 && $today_vote_count < VOTE_LIMIT){
+        $remaining = VOTE_LIMIT-$today_vote_count;
+        ?>
+        <div class="text-center">
+        <a href="<?php echo base_url().'index.php/ml/Home/'; ?>" type="button" class="btn btn-rounded btn-info"><span
+            class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
+        </span>Vote Again ( You have <?php echo $remaining ?> votes left for today )</a>
+        </div>
+    <?php }else{ ?>
+        <div class="text-center p-5" style="font-size:1.2em">
+            <label class="text-warning">Alert: Your vote limit has been exceeded. Please come back and vote again tomorrow!</label>
+        </div>
+    <?php } ?>
 
     <?php $this->load->view('back_button'); ?>
     <div class="row">
@@ -152,7 +166,8 @@
                         </div>
                         <div class="right__div w-100 text-center">
                             <div class="voted_panel">
-                                <?php if($voted_contestant_id == $row['id']){ ?>
+                                <?php 
+                                if(in_array($row['id'],$voted_contestant_ids)){?>
                                 <span class="material-symbols-outlined voted_icon">
                                     verified
                                 </span>

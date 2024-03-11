@@ -18,9 +18,9 @@ class Home extends MY_Controller
         $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id);
         $ipAddress = $this->input->ip_address();
         $data['page_title'] = 'Vote Your Favourite Contestant - '.$week_name;
-
+        $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
             // Check if the user has already voted today
-            if ($this->hasVotedToday($ipAddress)) {
+            if ($data['today_vote_count'] == VOTE_LIMIT) {
             // User has already voted today, return an error message
                 redirect('ml/Home/results');
             }
@@ -43,15 +43,21 @@ class Home extends MY_Controller
     function results(){
         // Check if the user has already voted today
         $ipAddress = $this->input->ip_address();
-        if ($this->hasVotedToday($ipAddress)) {
-            $data =array();
+        $data =array();
+        $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
+
+        if ($data['today_vote_count']) {
             // $data['contestants'] = $this->General->getdata('contestant','*');
 
             $data['week'] = $week_id = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
             $votes = $this->General->getdata('contestant_weekly_votes','contestant_id,vote_count',array('week_id'=>$week_id->id));
             $data['total_weekly_vote'] = $this->General->getrow('contestant_weekly_votes','sum(vote_count) as total_votes',array('week_id'=>$week_id->id))->total_votes;
             $data['votes_array'] = arrayKeySetter($votes,'contestant_id');
-            $data['voted_contestant_id'] = $this->General->getrow('vote_details','contestant_id',array('week_id'=>$week_id->id,'ip_address'=>$ipAddress))->contestant_id;
+            $voted_contestant_ids = $this->General->getdata('vote_details','contestant_id',array('week_id'=>$week_id->id,'ip_address'=>$ipAddress));
+
+            $data['voted_contestant_ids'] = array_map (function($value){
+                return $value['contestant_id'];
+            } , $voted_contestant_ids);
             $data['page_title'] = 'Result - '.$week_id->week_name;
             $data['top_trending'] = $this->VM->getTopTrending();
             $data['top_popular'] = $this->VM->getTopPopular();
@@ -77,11 +83,11 @@ class Home extends MY_Controller
     
         // Decrypt the contestant ID (assuming you're using base64 encoding)
         $contestantId = base64_decode($encryptedContestantId);
-    
+        
         // Check if the user has already voted today
-        if ($this->hasVotedToday($ipAddress)) {
+        if ($this->hasVotedToday($ipAddress) == VOTE_LIMIT) {
             // User has already voted today, return an error message
-            echo json_encode(array('status'=>'failed','message'=>'Sorry, you can only vote once per day.'));
+            echo json_encode(array('status'=>'failed','message'=>'Sorry, you can only three vote per day.'));
             return;
         }
     
@@ -104,15 +110,15 @@ class Home extends MY_Controller
     // Function to check if the user has already voted today
     private function hasVotedToday($ipAddress) {
         // Check if a cookie exists for the user's IP address
-        if(isset($_COOKIE['voted_' . $ipAddress])){
-            return true;
-        }else{
+        // if(isset($_COOKIE['voted_' . $ipAddress])){
+        //     return true;
+        // }else{
             $currentDate = date('Y-m-d');
 
             $week_id = $this->General->getrow('master_weeks','id',array('is_current'=>1))->id;
-            $is_voted = $this->General->find_record_exists('vote_details','id','week_id='.$week_id.' and ip_address="'.$ipAddress.'" and DATE(voted_on) = "'.$currentDate.'"');
+            $is_voted = $this->General->is_record_exists('vote_details','week_id='.$week_id.' and ip_address="'.$ipAddress.'" and DATE(voted_on) = "'.$currentDate.'"');
             return $is_voted;
-        }
+        // }
     }
 
     private function isValidIpAddress($ipAddress) {
