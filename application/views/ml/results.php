@@ -94,7 +94,9 @@
         color:#fff;
     }
 
-
+.ai_msg{
+    align-items: end;
+}
 @media only screen and (max-width: 767px) {
       .back_wrapper{
             align-items: center;
@@ -127,6 +129,9 @@
     .sub-heading {
         display: flex;
         flex-direction: column;
+    }
+    .ai_msg{
+        align-items: start !important;
     }
 }
 </style>
@@ -282,7 +287,7 @@
     <div>
         <h2 class="sub-heading">Top Trending Contestants
 
-            <small style="float:right;font-size:.5em;display:flex;flex-direction: column;align-items: end;">
+            <small class="ai_msg" style="float:right;font-size:.5em;display:flex;flex-direction: column;">
                 <span>*Based on Social Media AI Analysis</span>
                 <small>Last Updated on <?php echo $last_updated; ?></small>
             </small>
