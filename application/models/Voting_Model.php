@@ -93,6 +93,7 @@ class Voting_Model extends CI_Model
         $this->db->from('contestant_weekly_votes as CV');
         $this->db->join('contestant as C','C.id = CV.contestant_id');
         $this->db->where('CV.week_id',$week_id);
+        $this->db->order_by('vote_count','desc');
         $data = $this->db->get()->result_array();
         return $data;
     }
