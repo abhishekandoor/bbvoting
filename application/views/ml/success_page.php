@@ -19,13 +19,13 @@
     align-items:center;
 }
 
-@supports (animation: grow 2s cubic-bezier(.25, .25, .25, 1) forwards) {
+@supports (animation: grow 1s cubic-bezier(.25, .25, .25, 1) forwards) {
     .tick {
         stroke-opacity: 0;
         stroke-dasharray: 29px;
         stroke-dashoffset: 29px;
-        animation: draw 2s cubic-bezier(0.25, 0.25, 0.25, 1) forwards;
-        animation-delay: 2s;
+        animation: draw 1s cubic-bezier(0.25, 0.25, 0.25, 1) forwards;
+        animation-delay: 1s;
     }
 
     .circle {
@@ -34,7 +34,7 @@
         stroke-width: 16px;
         transform-origin: center;
         transform: scale(0);
-        animation: grow 2s cubic-bezier(0.25, 0.25, 0.25, 1.25) forwards;
+        animation: grow 1s cubic-bezier(0.25, 0.25, 0.25, 1.25) forwards;
     }
 }
 
@@ -107,7 +107,7 @@ function redirect() {
 
 // Countdown function
 function countdown() {
-    var seconds = 7; // Countdown duration in seconds
+    var seconds = 5; // Countdown duration in seconds
     var countdownElement = document.getElementById('countdown');
 
     var countdownInterval = setInterval(function() {
