@@ -97,5 +97,111 @@ class Voting_Model extends CI_Model
         $data = $this->db->get()->result_array();
         return $data;
     }
-    
+
+    function getCaptaincyTaskResult(){
+        $this->db->select('name,photo_url');
+        $this->db->from('task_results as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.task_type',1);
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+
+    function getWeeklyTaskResult(){
+        $this->db->select('name,photo_url');
+        $this->db->from('task_results as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.task_type',2);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+
+    function getDailyTaskResult(){
+        $this->db->select('name,photo_url,day');
+        $this->db->from('task_results as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.task_type',3);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+    function getKitchenTeam(){
+        $this->db->select('name,photo_url,is_power_team');
+        $this->db->from('team_details as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.type',1);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+    function getVesselTeam(){
+        $this->db->select('name,photo_url,is_power_team');
+        $this->db->from('team_details as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.type',2);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+    function getHouseCleaning(){
+        $this->db->select('name,photo_url,is_power_team');
+        $this->db->from('team_details as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.type',3);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+    function getToiletCleaning(){
+        $this->db->select('name,photo_url,is_power_team');
+        $this->db->from('team_details as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        $this->db->where('T.is_active',1);
+        $this->db->where('T.type',4);
+
+        $this->db->order_by('T.id');
+        $data = $this->db->get()->result_array();
+        return $data;
+    }
+
+    function getPowerTeam(){
+        $this->db->select('name,photo_url,week_id');
+        $this->db->from('bedroom_teams as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        // $this->db->where('T.is_active',1);
+        $this->db->where('T.type',1);
+
+        $this->db->order_by('week_id','desc');
+        $data = $this->db->get()->result_array();
+        $new_data = nestedArrayKeySetter($data,'week_id');
+        //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
+        return $new_data;
+    }
+    function getBedRoomTeam($type){
+        $this->db->select('name,photo_url,week_id');
+        $this->db->from('bedroom_teams as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        // $this->db->where('T.is_active',1);
+        $this->db->where('T.type',$type);
+
+        $this->db->order_by('week_id','desc');
+        $data = $this->db->get()->result_array();
+        $new_data = nestedArrayKeySetter($data,'week_id');
+        //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
+        return $new_data;
+    }
+
 }

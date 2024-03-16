@@ -18,8 +18,7 @@ foreach($contestants as $row){ ?>
             <div class="main-div d-flex align-items-center justify-content-between">
                 <div class="left__div">
                     <div class="photo__div text-center">
-                        <img src='<?php echo base_url().'/'.$row['photo_url']; ?>'
-                            style="height: 8em;" />
+                        <img src='<?php echo base_url().'/'.$row['photo_url']; ?>' style="height: 8em;" />
                     </div>
                     <div class="title__div text-center">
                         <div class="name__div">

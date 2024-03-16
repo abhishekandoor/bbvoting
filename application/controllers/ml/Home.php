@@ -89,6 +89,16 @@ class Home extends MY_Controller
         // Get the encrypted contestant ID and IP address from the AJAX request
         $encryptedContestantId = $this->input->post('contestant_id');
         $ipAddress = $this->input->ip_address();
+        if (!$this->input->is_ajax_request()) {
+            // This request is not initiated from a web browser, so reject it
+            show_error('Access Forbidden', 403); // You can customize the error message and code
+            return;
+        }
+        if (empty($_SERVER['HTTP_REFERER'])) {
+            // HTTP_REFERER is not set, indicating the request may not be from a browser
+            show_error('Access Forbidden', 403); // You can customize the error message and code
+            return;
+        }
     
         // Decrypt the contestant ID (assuming you're using base64 encoding)
         $contestantId = base64_decode($encryptedContestantId);
@@ -152,4 +162,74 @@ class Home extends MY_Controller
         $this->template->write_view("content",'ml/all_contestants', $data);
         $this->template->load();
     }
+
+    function task_results(){
+        $data =array();
+        $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+        $data['week_name'] = $week_name = $week->week_name;
+        $data['page_title'] = 'Captaincy Task - '.$week_name;
+
+        $data['captaincy_task'] = $this->VM->getCaptaincyTaskResult();
+        $data['weekly_task'] = $this->VM->getWeeklyTaskResult();
+        $data['daily_task'] = $this->VM->getDailyTaskResult();
+
+        // echo '<pre>'; print_r($data['daily_task']); echo '</pre>'; die;
+
+        $data['contestants'] = $this->General->getdata('contestant','*');
+        $this->template->write_view("content",'ml/task_results', $data);
+        $this->template->load();
+    }
+    function team_details(){
+        $data =array();
+        $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+        $data['week_name'] = $week_name = $week->week_name;
+        $data['page_title'] = ' Teams';
+
+        // $data['kitchen_team'] = $this->VM->getKitchenTeam();
+        // $data['vessel_team'] = $this->VM->getVesselTeam();
+        // $data['house_cleaning'] = $this->VM->getHouseCleaning();
+        // $data['toilet_cleaning'] = $this->VM->getToiletCleaning();
+
+
+         //echo '<pre>'; print_r($data['kitchen_team']); echo '</pre>'; die;
+
+        $data['contestants'] = $this->General->getdata('contestant','*');
+        $this->template->write_view("content",'ml/team_details', $data);
+        $this->template->load();
+    }
+    function power_team(){
+        $data =array();
+        $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+        $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+        // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+        $data['week_name'] = $week_name = $week->week_name;
+        $data['page_title'] = 'Power Team';
+        $data['contestants'] = $this->VM->getPowerTeam();
+        $data['all_weeks'] = $all_weeks;
+
+        $this->template->write_view("content",'ml/power_team', $data);
+        $this->template->load();
+    }
+
+function other_bedroom_team($type){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+    $data['week_name'] = $week_name = $week->week_name;
+    if($type==2){
+         $data['page_title'] = 'Nest Team';
+    }elseif($type==3){
+        $data['page_title'] = 'Den Team';
+    }  elseif($type==4){
+        $data['page_title'] = 'Tunnel Team';
+   }
+
+    $data['contestants'] = $this->VM->getBedRoomTeam($type);
+    $data['all_weeks'] = $all_weeks;
+
+    $this->template->write_view("content",'ml/power_team', $data);
+    $this->template->load();
+}
+
 }
