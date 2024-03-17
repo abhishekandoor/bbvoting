@@ -158,7 +158,7 @@ class Home extends MY_Controller
         $data =array();
         $data['page_title'] = 'All Contestants';
 
-        $data['contestants'] = $this->General->getdata('contestant','*');
+        $data['contestants'] = $this->General->getdata('contestant','*','','status');
         $this->template->write_view("content",'ml/all_contestants', $data);
         $this->template->load();
     }

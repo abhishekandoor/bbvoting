@@ -55,7 +55,13 @@ foreach($contestants as $row){ ?>
             <div class="me-3 fifth_container">
                 <p class="fs-14 mb-1">Status</p>
                 <span class=" font-w500 fs-16">
-                <span class="badge badge-success">Active</span>
+                <?php if($row['status'] == 1){ ?>
+                    <span class="badge badge-success">Active <span class="fa fa-check"></span></span>
+                <?php }elseif($row['status'] == 2){ ?>
+                    <span class="badge badge-danger">Terminated</span>
+                <?php } elseif($row['status'] == 3){ ?>
+                    <span class="badge badge-danger">Evicted <span class="fa fa-ban"></span></span>
+                <?php } ?>
                 </span>
             </div>
         </div>
