@@ -157,7 +157,14 @@
                 class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
             </span>Vote Again ( You have <?php echo $remaining ?> votes left for today )</a>
     </div>
-    <?php }else{ ?>
+    <?php }elseif(VOTE_LIMIT == 0){ ?>
+    <div class="text-center p-5" style="font-size:1.2em">
+
+           <label class="text-warning">Alert : Voting is closed now <br/>
+            <span>Voting will open after monday's episode</span>
+        </label>
+    </div>
+        <?php }else{ ?>
     <div class="text-center p-5" style="font-size:1.2em">
         <label class="text-warning">Alert: Your vote limit has been exceeded. Please come back and vote again
             tomorrow!</label>

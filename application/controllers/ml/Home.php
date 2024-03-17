@@ -20,7 +20,7 @@ class Home extends MY_Controller
         $data['page_title'] = 'Vote Your Favourite Contestant - '.$week_name;
         $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
             // Check if the user has already voted today
-            if ($data['today_vote_count'] == VOTE_LIMIT) {
+            if ($data['today_vote_count'] == VOTE_LIMIT || VOTE_LIMIT == 0) {
             // User has already voted today, return an error message
                 redirect('ml/Home/results');
             }
@@ -46,7 +46,7 @@ class Home extends MY_Controller
         $data =array();
         $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
 
-        if ($data['today_vote_count']) {
+        if ($data['today_vote_count'] || VOTE_LIMIT == 0) {
             // $data['contestants'] = $this->General->getdata('contestant','*');
 
             $data['week'] = $week_id = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
@@ -81,7 +81,7 @@ class Home extends MY_Controller
         $data['today_vote_count'] = $this->hasVotedToday($ipAddress);
         if ($data['today_vote_count'] < VOTE_LIMIT) {
             redirect('ml/Home');
-        }elseif($data['today_vote_count'] == VOTE_LIMIT){
+        }elseif($data['today_vote_count'] == VOTE_LIMIT || VOTE_LIMIT == 0){
             redirect('ml/Home/all_contestants');
         }
     }
