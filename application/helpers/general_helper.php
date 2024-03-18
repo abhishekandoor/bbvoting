@@ -1,6 +1,6 @@
 <?php
 // die;
-define("VOTE_LIMIT", 0);
+define("VOTE_LIMIT", 3);
 
 define("APPEAL_INVALID_ENTRY_QN_ID", 14);
 define("APPEAL_CLERK_QN_TIMEFRAME", 12);

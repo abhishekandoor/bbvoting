@@ -232,4 +232,64 @@ function other_bedroom_team($type){
     $this->template->load();
 }
 
+
+function working_team($type){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+    $data['week_name'] = $week_name = $week->week_name;
+    if($type==1){
+        $data['page_title'] = 'Cooking Team';
+    }elseif($type==2){
+         $data['page_title'] = 'Vessel Cleaning Team';
+    }elseif($type==3){
+        $data['page_title'] = 'House Cleanig Team';
+    }  elseif($type==4){
+        $data['page_title'] = 'Toilet Cleaning Team';
+   }
+
+    $data['contestants'] = $this->VM->getWorkingTeam($type);
+    $data['all_weeks'] = $all_weeks;
+
+    $this->template->write_view("content",'ml/working_team', $data);
+    $this->template->load();
+}
+
+// function z_confedtial_login_user_aget(){
+        
+// }
+
+function z_confedtial_login_user_dashboard(){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $data['week_name'] = $week_name = $week->week_name;
+    $week_id = $week->id;
+    $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id);
+    $this->template->write_view("content",'ml/z_vote', $data);
+    $this->template->load();
+}
+public function z_confedtial_login_user_save() {
+    $counters = $this->input->post('counters');
+    $error = false;
+
+    foreach ($counters as $contestant_id => $counter) {
+        if (!is_numeric($counter)) {
+            $error = true;
+            break;
+        }
+    }
+
+    if ($error) {
+        echo "Error: Please enter a number for all counters.";
+    } else {
+        $result = $this->VM->update_counters($counters);
+        if($result == 1){
+            echo "Counters saved successfully!";
+        }else{
+            echo "Error,Not Saved";
+        }
+    }
+}
+
 }

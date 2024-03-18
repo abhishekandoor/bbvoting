@@ -102,8 +102,9 @@
 .ai_msg {
     align-items: end;
 }
-.team-icon{
-    font-size:4em;
+
+.team-icon {
+    font-size: 4em;
 }
 
 @media only screen and (max-width: 767px) {
@@ -168,87 +169,88 @@
                     <div class="row">
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <a href="<?php echo base_url().'index.php/ml/Home/power_team';?>">
-                        <div class="card mt-1 mt-md-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                           
-                                        <span class="material-symbols-outlined team-icon">shield_person</span>
-                                        
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white"> Power Team</h4>
-                                            <!-- <span class="fs-14">$5,412</span> -->
+                            <a href="<?php echo base_url().'index.php/ml/Home/power_team';?>">
+                                <div class="card mt-1 mt-md-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+
+                                                <span class="material-symbols-outlined team-icon">shield_person</span>
+
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white"> Power Team</h4>
+                                                <!-- <span class="fs-14">$5,412</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>    
-                        
+                            </a>
+
                         </div>
                         <!--/column-->
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/2';?>">
+                            <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/2';?>">
 
-                            <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">raven</span>
-                                            
-                                        </div>
-                                        <div class="">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Nest </h4>
-                                            <!-- <span class="fs-14">$3,784</span> -->
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">raven</span>
+
+                                            </div>
+                                            <div class="">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Nest </h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                         </div>
                         <!--/column-->
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/3';?>">
+                            <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/3';?>">
 
-                            <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">radio_button_checked</span>
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span
+                                                    class="material-symbols-outlined team-icon">radio_button_checked</span>
 
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Den</h4>
-                                            <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Den</h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-</a>
+                            </a>
                         </div>
                         <!--/column-->
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/4';?>">
+                            <a href="<?php echo base_url().'index.php/ml/Home/other_bedroom_team/4';?>">
 
-                            <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap ">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">subway</span>
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap ">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">subway</span>
 
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Tunnel</h4>
-                                            <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Tunnel</h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-</a>
+                            </a>
                         </div>
                         <!--/column-->
                     </div>
@@ -259,7 +261,7 @@
     </div>
 </div>
 
-<?php /* ?>
+
 
 <div class="fourth_container">
     <div class="task_wrapper row">
@@ -269,73 +271,84 @@
                     <div class="row">
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                            <div class="card mt-1 mt-md-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">cooking</span>
-                                            
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Cooking Team</h4>
-                                            <span class="fs-14">$5,412</span>
+                            <a href="<?php echo base_url().'index.php/ml/Home/working_team/1';?>">
+                                <div class="card mt-1 mt-md-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">cooking</span>
+
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Cooking Team</h4>
+                                                <!-- <span class="fs-14">$5,412</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <!--/column-->
+                        <!--column-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <a href="<?php echo base_url().'index.php/ml/Home/working_team/2';?>">
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">faucet</span>
+
+                                            </div>
+                                            <div class="">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Vessel Cleaning
+                                                </h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <!--/column-->
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">faucet</span>
-                                           
-                                        </div>
-                                        <div class="">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Vessel Cleaning</h4>
-                                            <span class="fs-14">$3,784</span>
+                                <a href="<?php echo base_url().'index.php/ml/Home/working_team/3';?>">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">mop</span>
+
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">House Cleanig
+                                                </h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <!--/column-->
                         <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                            <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">mop</span>
-                                            
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">House Cleanig</h4>
-                                            <span class="fs-14">$3,784</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/column-->
-                        <!--column-->
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                            <div class="card mt-3">
-                                <div class="card-body p-3">
-                                    <div class="align-items-center h-100 d-flex flex-wrap ">
-                                        <div class="d-inline-block position-relative donut-chart-sale me-2">
-                                        <span class="material-symbols-outlined team-icon">bathroom</span>
-                                        </div>
-                                        <div class=" ">
-                                            <h4 class="fs-18 font-w600 mb-1 text-break text-white">Toilet Cleaning</h4>
-                                            <span class="fs-14">$3,784</span>
+                            <a href="<?php echo base_url().'index.php/ml/Home/working_team/4';?>">
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap ">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">bathroom</span>
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Toilet Cleaning
+                                                </h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!--/column-->
                     </div>
@@ -345,7 +358,6 @@
         </div>
     </div>
 </div>
-<?php */?>
 
 
 
