@@ -82,7 +82,7 @@ class Home extends MY_Controller
         if ($data['today_vote_count'] < VOTE_LIMIT) {
             redirect('ml/Home');
         }elseif($data['today_vote_count'] == VOTE_LIMIT || VOTE_LIMIT == 0){
-            redirect('ml/Home/all_contestants');
+            redirect('ml/Home/dashboard');
         }
     }
     public function vote() {
@@ -291,5 +291,52 @@ public function z_confedtial_login_user_save() {
         }
     }
 }
+
+
+function eviction(){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+    $data['week_name'] = $week_name = $week->week_name;
+    $data['page_title'] = 'Evicted Contestants';
+    $data['contestants'] = $this->VM->getEvictedContestants();
+    $data['all_weeks'] = $all_weeks;
+
+    $this->template->write_view("content",'ml/evicted_contestants', $data);
+    $this->template->load();
+}
+function jail(){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+    $data['week_name'] = $week_name = $week->week_name;
+    $data['page_title'] = 'Weekly Prisoners';
+    $data['contestants'] = $this->VM->getJailContestants();
+    $data['all_weeks'] = $all_weeks;
+
+    $this->template->write_view("content",'ml/jail_contestants', $data);
+    $this->template->load();
+}
+
+function dashboard(){
+    $data =array();
+    $data['page_title'] = ' Dashboard';
+    $this->template->write_view("content",'ml/dashboard', $data);
+    $this->template->load();
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

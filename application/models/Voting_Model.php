@@ -305,7 +305,30 @@ class Voting_Model extends CI_Model
         //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
         return $new_data;
     }
-
    
+    function getEvictedContestants(){
+        $this->db->select('name,photo_url,week_id');
+        $this->db->from('evition_details as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        // $this->db->where('T.is_active',1);
+
+        $this->db->order_by('week_id','desc');
+        $data = $this->db->get()->result_array();
+        $new_data = nestedArrayKeySetter($data,'week_id');
+        //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
+        return $new_data;
+    }
+    function getJailContestants(){
+        $this->db->select('name,photo_url,week_id');
+        $this->db->from('jail_contestants as T');
+        $this->db->join('contestant as C','C.id = T.contestant_id');
+        // $this->db->where('T.is_active',1);
+
+        $this->db->order_by('week_id','desc');
+        $data = $this->db->get()->result_array();
+        $new_data = nestedArrayKeySetter($data,'week_id');
+        //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
+        return $new_data;
+    }
 
 }
