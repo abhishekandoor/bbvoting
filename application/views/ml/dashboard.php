@@ -150,15 +150,7 @@
 </style>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
-<div class="back_wrapper">
-    <a class="back_btn" href="<?php echo base_url().'index.php/ml/Home/go_back'; ?>">
-        <span class="material-symbols-outlined">
-            keyboard_backspace
-        </span>
-    </a>
-    <h2 class="Result-heading"><?php echo $page_title; ?>
-        <?php echo $kitchen_team[0]['is_power_team'] == 1 ? '(Power Team)' :""; ?> </h2>
-</div>
+<?php $this->load->view('back_button'); ?>
 
 
 <div class="fourth_container">
@@ -289,6 +281,26 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <a href="<?php echo base_url().'index.php/ml/Home/captain_details';?>">
+
+                                <div class="card mt-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap ">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                                <span class="material-symbols-outlined team-icon">shield_person</span>
+
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white">Captain</h4>
+                                                <!-- <span class="fs-14">$3,784</span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        </div> 
                         <!--/column-->
                     </div>
                     <!-- --/row-- -->
@@ -297,13 +309,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 <script>
 
 </script>

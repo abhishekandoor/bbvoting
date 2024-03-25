@@ -327,6 +327,25 @@ function dashboard(){
     $this->template->load();
 }
 
+function captain_details(){
+    $data =array();
+    $data['page_title'] = 'Captain Details';
+
+    // $data['contestants'] = $this->General->getdata('contestant','*','','status');
+    $data['house_captains'] = $this->VM->getCptainsByType();
+    //$data['kitchen_captain'] = $this->VM->getCptainsByType(1);
+   // $data['vessel_captain'] = $this->VM->getCptainsByType(2);
+    //$data['floor_captain'] = $this->VM->getCptainsByType(3);
+    //$data['bathroom_captain'] = $this->VM->getCptainsByType(4);
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+
+    $data['all_weeks'] = $all_weeks;
+
+    $this->template->write_view("content",'ml/captains', $data);
+    $this->template->load();
+}
 
 
 

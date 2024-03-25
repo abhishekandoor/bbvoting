@@ -10,18 +10,27 @@
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="bbvoting.com : biggboss unofficial voting platform">
-    <meta property="og:title" content="bbvoting.com : biggboss unofficial voting platform">
-    <meta property="og:description" content="bbvoting.com : Biggboss unofficial voting platform">
-    <meta property="og:image" content="<?php echo base_url() . '/uploads/og_image.png' ?>">
-    <meta property="og:url" content="www.bbvoting.com">
+
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="biggboss, biggboss voting, unofficial biggboss voting, biggboss vote, vote for biggboss, biggboss season 6,biggboss malayalam,,biggboss malayalam voting, biggboss contestants, biggboss updates">
     <meta name="google-adsense-account" content="ca-pub-9199579426500892">
+
+    <meta property="og:title" content="Bigg Boss Unofficial Voting Platform">
+    <meta property="og:site_name" content="bbvoting.com">
+    <meta property="og:url" content="https://bbvoting.com">
+    <meta property="og:description" content="Dive into the world of Bigg Boss with our unofficial voting platform and AI-driven analytics. Get real-time insights, trends, and predictions about your favorite contestants!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bbvoting.com/assets/icons/bb-og.jpg"> 
+
     <!-- PAGE TITLE HERE -->
-    <title>biggboss | biggboss unofficalvoting | biggboss unofficial voting platform</title>
+    <title>bbvoting.com | Biggboss Unofficial Voting Platform</title>
 
     <!-- FAVICONS ICON -->
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/<?php echo base_url(); ?>assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180"    href="<?php echo base_url(); ?>/assets/icons/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url(); ?>/assets/icons/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/assets/icons/fav/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo base_url(); ?>/assets/icons/fav/site.webmanifest">
+    <!-- <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/images/favicon.png"> -->
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/vendor/jquery-autocomplete/jquery-ui.css" rel="stylesheet">
     <link href="<?php echo base_url().'assets/css/style.css?'.time();?>" rel="stylesheet">
