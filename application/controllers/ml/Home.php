@@ -348,7 +348,13 @@ function captain_details(){
 }
 
 
+function  profile(){
+    $data =array();
+    $data['page_title'] = 'Profile';
 
+    $this->template->write_view("content",'ml/profile', $data);
+    $this->template->load();
+}
 
 
 

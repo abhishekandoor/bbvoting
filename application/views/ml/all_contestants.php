@@ -11,6 +11,12 @@
     .vote_panel{
         margin-bottom:5em;
     }
+    .contestant-card:hover{    
+        background-color: #83a2ddbd;
+        color: black;
+        border-radius: 10px;
+
+    }
     @media only screen and (max-width: 767px) {
         .first_container{
             width:100%;
@@ -30,9 +36,14 @@
     <div class="card-body pb-0 pt-2">
         <?php 
 
-foreach($contestants as $row){ ?>
+foreach($contestants as $row){ 
+    $converted_string = str_replace(" ", "_", $row['name']);
+$converted_string = strtolower($converted_string);
 
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center card-type">
+    ?>
+    <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$row["id"]; ?>">
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center card-type contestant-card">
             <div class="d-flex py-2 align-items-center first_container">
                 <img src="<?php echo base_url().'/'.$row['photo_url']; ?>" alt="" class="rounded me-3 card-list-img" width="50">
                 <div class="me-3">
@@ -58,13 +69,13 @@ foreach($contestants as $row){ ?>
                 <?php if($row['status'] == 1){ ?>
                     <span class="badge badge-success">Active <span class="fa fa-check"></span></span>
                 <?php }elseif($row['status'] == 2){ ?>
-                    <span class="badge badge-danger">Terminated</span>
+                    <span class="badge badge-danger">Ejected <span class="fa fa-ban"></span></span>
                 <?php } elseif($row['status'] == 3){ ?>
                     <span class="badge badge-danger">Evicted <span class="fa fa-ban"></span></span>
                 <?php } ?>
                 </span>
             </div>
-        </div>
+        </div></a>
         <?php } ?>
 
     </div>
