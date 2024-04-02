@@ -76,7 +76,6 @@
                     <li>Shares relatable short videos.</li>
                     <li>Explores topics like mental health, depression, suicide, and toxic parenting.</li>
                     <li>Celebrates personal milestones.</li>
-                    <li>Highly anticipated performance in Bigg Boss Malayalam Season 6.</li>
                 </ul>
 
 

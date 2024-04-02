@@ -4,6 +4,7 @@ class Home extends MY_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->library('encryption');
         $this->load->model('General');
         $this->load->model('Voting_Model','VM');
     }

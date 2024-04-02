@@ -17,6 +17,11 @@
         border-radius: 10px;
 
     }
+    .fifth_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     @media only screen and (max-width: 767px) {
         .first_container{
             width:100%;
@@ -39,9 +44,9 @@
 foreach($contestants as $row){ 
     $converted_string = str_replace(" ", "_", $row['name']);
 $converted_string = strtolower($converted_string);
-
+$encryptedId = strtr($this->encryption->encrypt($row['id']), array('+' => '.', '=' => '-', '/' => '~'))
     ?>
-    <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$row["id"]; ?>">
+    <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$encryptedId; ?>">
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center card-type contestant-card">
             <div class="d-flex py-2 align-items-center first_container">
@@ -72,6 +77,10 @@ $converted_string = strtolower($converted_string);
                     <span class="badge badge-danger">Ejected <span class="fa fa-ban"></span></span>
                 <?php } elseif($row['status'] == 3){ ?>
                     <span class="badge badge-danger">Evicted <span class="fa fa-ban"></span></span>
+                <?php } elseif($row['status'] == 4){ ?>
+                    <span class="badge badge-danger">Quit <span class="fa fa-ban"></span></span>
+                <?php }elseif($row['status'] == 5){ ?>
+                    <span class="badge badge-warning">Hospitalized <span class="fa fa-hospital"></span></span>
                 <?php } ?>
                 </span>
             </div>

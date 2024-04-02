@@ -78,7 +78,7 @@
                 <h4 class="text-primary mb-2 ">Passion for Dance:
 
                 </h4>
-                <ul class="unorder-list ms-5">>
+                <ul class="unorder-list ms-5">
                     <li>Rishi’s confidence, happiness, and perfection shine through when he dances. His dream is to
                         travel the world, and he also received an offer for a world tour based on his dance
                         performances.</li>

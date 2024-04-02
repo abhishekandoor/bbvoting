@@ -1,8 +1,8 @@
 <style>
 .profile_cover_photo{
-    background: url(<?php echo base_url('assets/images/profile/8.jpg'); ?>);
+    background: url(<?php echo base_url('assets/images/profile/8.png'); ?>);
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     min-height: 20rem;
     width: 100%;
 }

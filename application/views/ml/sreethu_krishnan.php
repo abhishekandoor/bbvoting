@@ -80,7 +80,7 @@
                 <h4 class="text-primary mb-2 ">Filmography:
 
                 </h4>
-                <ul class="unorder-list ms-5">>
+                <ul class="unorder-list ms-5">
                     <li>Sreethu ventured into films with the Tamil movie "10 Endrathukulla", where she played James
                         Bond's sister.</li>
                     <li>She also appears in the film "Irulil Ravanan" in a leading role.</li>

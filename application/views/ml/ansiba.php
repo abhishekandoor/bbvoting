@@ -110,8 +110,8 @@
                     <li>“Comedy Super Night 2”: Host (Flowers TV)</li>
                     <li>“Marhaba”: Anchor (Flowers TV)</li>
                     <li>“Sell Me the Answer”: Participant (Asianet)</li>
-                    <li>“Lalettanodoppam”: Host (Kadumudy TV)</li>
-                    <li>“Onam Samam Payasam”: Presenter (Kadumudy TV)</li>
+                    <li>“Lalettanodoppam”: Host (kaumudy TV)</li>
+                    <li>“Onam Samam Payasam”: Presenter (kaumudy TV)</li>
                 </ul>
 
 
