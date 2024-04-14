@@ -14,7 +14,6 @@
         background: url(<?php echo base_url('assets/images/profile/small/22.png');
         ?>);
         background-size: cover;
-        background-position: center;
     }
 }
 </style>
@@ -59,12 +58,47 @@
                     <p class="mb-2" style="text-indend:4px;">Pooja Krishna was born on 20 July 2000 (Thursday) in
                         Thrissur, Kerala. As of 2023, she is 23 years old. Her hometown is also in Thrissur, Kerala. She
                         attended Sreekrishna Higher Secondary School in Guruvayur, Kerala, and later studied at St.
-                        Thomas College in Thrissur, Kerala.
-
-
-
-                    </p>
+                        Thomas College in Thrissur, Kerala. </p>
                 </div>
+            </div>
+            <div class="profile-skills mb-3">
+                <h4 class="text-primary mb-2">Anchor and Host Career Highlights</h4>
+                <ul class="unorder-list ms-5">
+                    <li>She has worked as an anchor on YouTube channels such as Variety Media, Jango Space, and
+                        Behindwoods. </li>
+                </ul>
+            </div>
+            <div class="profile-lang  mb-3">
+                <h4 class="text-primary mb-2 ">Film Ventures:
+                </h4>
+                <ul class="unorder-list ms-5">
+                    <li>Appeared in short films and feature films like “Rekha,” showcasing versatility as an artist and
+                        creating memorable moments on screen.</li>
+                </ul>
+            </div>
+            <div class="profile-lang  mb-3">
+                <h4 class="text-primary mb-2">Television Highlights:
+                </h4>
+                <ul class="unorder-list ms-5">
+                    <li>Participated as a contestant on D4Dance MMTV in 2013.</li>
+                    <li>Acted in the popular show “Thatteem Mutteem” in 2020, displaying acting skills alongside
+                        anchoring talents.</li>
+                </ul>
+            </div>
+            <div class="profile-lang  mb-3">
+                <h4 class="text-primary mb-2">Continuing Narrative:
+                </h4>
+                <ul class="unorder-list ms-5">
+                    <li>Pooja Krishna's career as an anchor and host continues to evolve, driven by a passion for
+                        storytelling and creativity.
+                    </li>
+
+
+                </ul>
+
+
+
+
             </div>
         </div>
     </div>

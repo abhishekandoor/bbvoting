@@ -14,7 +14,7 @@
         background: url(<?php echo base_url('assets/images/profile/small/25.png');
         ?>);
         background-size: cover;
-        background-position: center;
+        
     }
 }
 </style>
