@@ -66,57 +66,6 @@
                     </p>
                 </div>
             </div>
-            <div class="profile-skills mb-5">
-                <h4 class="text-primary mb-2">Film Career Highlights</h4>
-                <ul class="unorder-list ms-5">
-                    <li>Ansiba debuted as a TV presenter before venturing into the Tamil and Malayalam film industry.
-                    </li>
-                    <li>Her notable film roles include "Drishyam" (Anju George), "Uthara Chemmeen" (Neelipennu), "CBI 5:
-                        The Brain" (CBI Officer Anitha), "Kurukkan" (Anjitha), "Drishyam 2" (Anju George), "Badarul
-                        Muneer Husnul Jamal Sulekha", and "Zebra Varakal" (Mary Cherian).</li>
-                </ul>
-
-
-
-            </div>
-            <div class="profile-lang  mb-5">
-                <h4 class="text-primary mb-2 ">Notable Roles:
-
-                </h4>
-                <ul class="unorder-list ms-5">
-                    <li>“Drishyam”: Anju George (Malayalam)</li>
-                    <li>“Uthara Chemmeen”: Neelipennu (Malayalam)</li>
-                    <li>“CBI 5: The Brain”: CBI Officer Anitha (Malayalam)</li>
-                    <li>“Kurukkan”: Anjitha (Malayalam)</li>
-                    <li>“Drishyam 2”: Anju George (Malayalam) – Sequel to “Drishyam”</li>
-                    <li>“Badarul Muneer Husnul Jamal Sulekha” (Malayalam)</li>
-                    <li>“Zebra Varakal”: Mary Cherian (Malayalam)</li>
-                </ul>
-
-
-
-
-            </div>
-
-            <div class="profile-lang  mb-5">
-                <h4 class="text-primary mb-2">Television Career Highlights:
-
-
-
-                </h4>
-                <ul class="unorder-list ms-5">
-                    <li>“Ente Kuttikkalam”: Presenter (Kochu TV)</li>
-                    <li>“Comedy Super Night 2”: Host (Flowers TV)</li>
-                    <li>“Marhaba”: Anchor (Flowers TV)</li>
-                    <li>“Sell Me the Answer”: Participant (Asianet)</li>
-                    <li>“Lalettanodoppam”: Host (kaumudy TV)</li>
-                    <li>“Onam Samam Payasam”: Presenter (kaumudy TV)</li>
-                </ul>
-
-
-
-
-            </div>
         </div>
     </div>
 </div>
