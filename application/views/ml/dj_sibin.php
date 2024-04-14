@@ -69,8 +69,7 @@
                 <ul class="unorder-list ms-5">
                     <li>DJ Sibin Benjamin is a prominent figure in the music scene, known for his unique sound and
                         energetic performances. </li>
-                    <li>Her notable film roles include "Drishyam" (Anju George), "Uthara
-                        The Brain" (CBI Officer Anitha), "Kurukkan" (Anjitha), "Drishyam</li>
+                    <li>His passion for beats, rhythms, and melodies led him to explore the art of DJing.</li>
                 </ul>
 
 
