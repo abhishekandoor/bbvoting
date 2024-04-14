@@ -46,7 +46,7 @@ foreach($contestants as $row){
 $converted_string = strtolower($converted_string);
 $encryptedId = strtr($this->encryption->encrypt($row['id']), array('+' => '.', '=' => '-', '/' => '~'))
     ?>
-    <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$encryptedId; ?>">
+    <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$row['id']; ?>">
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center card-type contestant-card">
             <div class="d-flex py-2 align-items-center first_container">
