@@ -228,7 +228,7 @@
             </div>
 
             <div class="copyright">
-                <p>Privacy Policy <a target="_blank" href="http://bbvoting.com/privacypolicy.html"> | Privacy Policy</a></p>
+                <p><a target="_blank" href="https://bbvoting.com/terms_and_condition.html">Terms and Conditions</a> | <a target="_blank" href="https://bbvoting.com/privacypolicy.html"> Privacy Policy</a></p>
             </div>
 
         </div>
