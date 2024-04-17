@@ -290,7 +290,7 @@
 
 </div>
 
-<div class="second_container">
+<!-- <div class="second_container">
     <div>
         <h2 class="sub-heading">Top Trending Contestants
 
@@ -384,7 +384,7 @@
             echo '<div class="text-center text-danger">No Data Found!</div>';
         } ?>
     </div>
-</div>
+</div> -->
 
 <div class="modal fade" id="result_modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
