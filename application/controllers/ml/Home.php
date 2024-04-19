@@ -299,7 +299,7 @@ public function z_confedtial_login_user_save() {
 function eviction(){
     $data =array();
     $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
-    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name,is_current,has_eviction',array('id <='=>$week->id),'id desc');
     // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
     $data['week_name'] = $week_name = $week->week_name;
     $data['page_title'] = 'Evicted Contestants';
