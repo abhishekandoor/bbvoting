@@ -148,8 +148,13 @@ foreach($all_weeks as $data){ ?>
     <div class="task_wrapper row">
         <?php 
           if(count($contestants[$data['id']]) > 0){
-        foreach($contestants[$data['id']] as $row){ ?>
+        foreach($contestants[$data['id']] as $row){
+            $converted_string = str_replace(" ", "_", $row['name']);
+            $converted_string = strtolower($converted_string);
+            ?>
         <div class="trending_wrapper_child">
+        <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$row['id']; ?>">
+
             <div class="card">
                 <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
                     alt="Card image cap">
@@ -158,6 +163,7 @@ foreach($all_weeks as $data){ ?>
 
                 </div>
             </div>
+        </a>
         </div>
         <?php }
         }else{

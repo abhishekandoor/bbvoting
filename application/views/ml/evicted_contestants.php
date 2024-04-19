@@ -167,7 +167,7 @@ foreach($all_weeks as $data){ ?>
 
     </div>
 </div>
-  <?php  } ?>
+<?php  } ?>
 
 
 

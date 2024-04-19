@@ -252,6 +252,8 @@ function working_team($type){
 
     $data['contestants'] = $this->VM->getWorkingTeam($type);
     $data['all_weeks'] = $all_weeks;
+    $data['type'] = $type;
+
 
     $this->template->write_view("content",'ml/working_team', $data);
     $this->template->load();

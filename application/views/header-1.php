@@ -382,10 +382,11 @@
             <ul class="navlinks">
                 <li><a href="<?php echo base_url(); ?>">Home</a></li>
                 <!-- <li><a href="#">Portfolio</a></li> -->
+                <li><a href="<?php echo base_url('index.php/ml/Home/all_contestants'); ?>">Contestants List</a></li>
+                <li><a href="<?php echo base_url('index.php/ml/Home/dashboard'); ?>">Dashboard</a></li>
+                <li><a href="<?php echo base_url('index.php/ml/Home/team_details'); ?>">House Teams</a></li>
                 <li><a href="<?php echo base_url('index.php/ml/Home/aboutus'); ?>">About</a></li>
                 <li><a href="<?php echo base_url('contact-us'); ?>">Contact</a></li>
-                <li><a href="<?php echo base_url('index.php/ml/Home/all_contestants'); ?>">Contestants List</a></li>
-                <li><a href="<?php echo base_url('index.php/ml/Home/team_details'); ?>">House Teams</a></li>
                 <li><a href="https://www.instagram.com/bbvoting.com.offl" target="_blank"><img style="width:30px;" src="https://static-00.iconduck.com/assets.00/instagram-icon-512x512-ggh8x3cn.png"></a></li>
             </ul>
         </div>

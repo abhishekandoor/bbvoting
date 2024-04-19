@@ -280,7 +280,7 @@ class Voting_Model extends CI_Model
         return $new_data;
     }
     function getBedRoomTeam($type){
-        $this->db->select('name,photo_url,week_id');
+        $this->db->select('name,photo_url,week_id,C.id');
         $this->db->from('bedroom_teams as T');
         $this->db->join('contestant as C','C.id = T.contestant_id');
         // $this->db->where('T.is_active',1);
@@ -293,7 +293,7 @@ class Voting_Model extends CI_Model
         return $new_data;
     }
     function getWorkingTeam($type){
-        $this->db->select('name,photo_url,week_id');
+        $this->db->select('name,photo_url,week_id,C.id');
         $this->db->from('working_team as T');
         $this->db->join('contestant as C','C.id = T.contestant_id');
         // $this->db->where('T.is_active',1);

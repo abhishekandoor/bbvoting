@@ -141,31 +141,43 @@
 <?php
 
 // echo '<pre>'; print_r($contestants); echo '</pre>'; die;
-foreach($all_weeks as $data){ ?>
+foreach($all_weeks as $data){ 
+    if($type==2 && $data['id'] > 1){
+        continue;
+    }
+    ?>
 
 <div><h3 class="text-white"><?php echo $data['week_name'] ?></php></php></h3></div>
 <div class="second_container">
-    <div class="task_wrapper row">
-        <?php 
-          if(count($contestants[$data['id']]) > 0){
-        foreach($contestants[$data['id']] as $row){ ?>
-        <div class="trending_wrapper_child">
-            <div class="card">
-                <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
-                    alt="Card image cap">
-                <div class="card-header">
-                    <h5 class="card-title contestant_name_label"><?php echo $row['name']; ?></h5>
 
+        <div class="task_wrapper row">
+            <?php 
+              if(count($contestants[$data['id']]) > 0){
+            foreach($contestants[$data['id']] as $row){ 
+    $converted_string = str_replace(" ", "_", $row['name']);
+$converted_string = strtolower($converted_string);
+
+                
+                ?>
+            <div class="trending_wrapper_child">
+                <a href="<?php echo base_url().'index.php/ml/Profile/'.$converted_string.'/'.$row['id']; ?>">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src='<?php echo base_url().'/'.$row['photo_url']; ?>'
+                        alt="Card image cap">
+                    <div class="card-header">
+                        <h5 class="card-title contestant_name_label"><?php echo $row['name']; ?></h5>
+    
+                    </div>
                 </div>
+            </a>
             </div>
+            <?php }
+            }else{
+                echo '<div class="text-center text-danger">No Data Found!</div>';
+            } ?>
+    
+    
         </div>
-        <?php }
-        }else{
-            echo '<div class="text-center text-danger">No Data Found!</div>';
-        } ?>
-
-
-    </div>
 </div>
   <?php  } ?>
 
