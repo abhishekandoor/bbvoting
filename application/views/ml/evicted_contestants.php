@@ -142,7 +142,7 @@
 
 // echo '<pre>'; print_r($contestants); echo '</pre>'; die;
 foreach($all_weeks as $data){
-    if($data['is_current'] == 1 || $data['has_eviction'] == 0){
+    if($data['has_eviction'] == 0){
         continue;
     }
     ?>
