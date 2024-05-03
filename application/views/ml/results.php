@@ -181,9 +181,15 @@
         <h2 class="Result-heading"><?php echo $page_title; ?></h2>
     </div>
     <div class="row">
-        <?php foreach($contestants as $row){
-            $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
-            $total_percentage = $votes/$total_weekly_vote*100;
+        <?php 
+        
+        // echo '<pre>'; print_r($contestants); echo '</pre>'; die;
+        foreach($Nominatedcontestants as $row){
+
+            $votes = $row['vote_count'] ? $row['vote_count'] : 0;
+
+            //echo '<pre>'; print_r($row); echo '</pre>'; die;
+            $total_percentage = $votes/$total_current_weekly_vote*100;
             ?>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="card  wallet">
@@ -226,7 +232,7 @@
 
                                 <div>
                                     <span
-                                        class="total_percentage"><?php echo $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0 ?>
+                                        class="total_percentage"><?php echo $row['vote_count'] ? $row['vote_count'] : 0 ?>
                                         <span class="votes_count_label"> votes</span>
                                     </span>
 
@@ -242,37 +248,55 @@
         <?php } ?>
     </div>
 </div>
+<?php
+foreach ($votes_array as $key =>$data ) {
+    # code...
+
+
+?>
+
 
 <div class="table-view-container">
     <div class="card">
         <div class="card-header d-sm-flex d-block border-1">
             <!-- <div class="me-auto mb-sm-0 mb-4">
-                <h4 class="fs-18 text-white">Vote Result - <?php echo $week->week_name; ?>  <span style="color:yellow;margin-left:2em;">bbvoting.com</span></h4>
+                <h4 class="fs-18 text-white">Vote Result - <?php echo 'Week '.$key ?>  <span style="color:yellow;margin-left:2em;">bbvoting.com</span></h4>
             </div> -->
             <div class="d-flex justify-content-between w-100">
-                <h4 class="fs-18 text-white">Vote Result - <?php echo $week->week_name; ?></h4>
+                <h4 class="fs-18 text-white">Vote Result - <?php echo 'Week '.$key; ?></h4>
                 <span class="fs-18 " style="color:yellow;margin-left:2em;">bbvoting.com</span>
             </div>
             <!-- <div class="add-btn me-2">
             <button type="button" onclick="saveResults();" class="btn btn-rounded btn-secondary" style="
     background: yellow;
     color: #000;
-"><span class="btn-icon-start text-warning" style="
-    background: #000;
-    color: yellow;
-"><i class="fa fa-download " style="color: yellow;"></i>
+
+
+
+            "><span class="btn-icon-start text-warning" style="
+                background: #000;
+                color: yellow;
+            "><i class="fa fa-download " style="color: yellow;"></i>
             </span>Download Result as Image</button>
             </div> -->
         </div>
         <div class="card-body pb-4 pt-2">
             <?php 
             $total_votes = 0;
-            foreach($contestants as $row){
+            foreach($votes_array[$key] as $row){
+$votes = $row['vote_count'] ? $row['vote_count'] : 0;
 
-            $votes = $votes_array[$row['id']]['vote_count'] ? $votes_array[$row['id']]['vote_count'] : 0;
-            $total_percentage = $votes/$total_weekly_vote*100;
+if($weeklyvotes[$key]['total_votes']==0){
+    $total_percentage=0;
+    
+    
+}
+ else{
+    $total_percentage = $votes/$weeklyvotes[$key]['total_votes'] * 100;
+
+ }   
             ?>
-            <h6 class="mt-1 text-white"><?php echo $row['name'] ?>
+            <h6 class="mt-1 text-white"><?php echo $contestants[$row['contestant_id']]['name']; ?>
                 <span class="pull-right" style="float:right;"><?php echo $votes.' votes'; ?></span>
             </h6>
             <div class="progress-bar bg-warning active progress-bar-striped" style="width: <?php echo round($total_percentage).'%'; ?>; height:14px;" role="progressbar">
@@ -289,6 +313,7 @@
     </div>
 
 </div>
+<?php }?> 
 
 <!-- <div class="second_container">
     <div>

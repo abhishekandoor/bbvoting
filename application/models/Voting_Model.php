@@ -178,12 +178,25 @@ class Voting_Model extends CI_Model
     }
 
     function getNominatedContestantsByWeekId($week_id){
-        $this->db->select('C.name,C.profession,C.id,C.photo_url');
+        $this->db->select('C.name,C.profession,C.id,C.photo_url,CV.vote_count');
         $this->db->from('contestant_weekly_votes as CV');
         $this->db->join('contestant as C','C.id = CV.contestant_id');
         $this->db->where('CV.week_id',$week_id);
+        $this->db->where_not_in('C.status',array(2,4));
         $this->db->order_by('vote_count','desc');
         $data = $this->db->get()->result_array();
+        //echo '<pre>'; print_r($data); echo '</pre>'; die;
+        return $data;
+
+    }
+
+    function getNominatedContestants(){
+        $this->db->select('C.name,C.profession,C.id,C.photo_url');
+        $this->db->from('contestant_weekly_votes as CV');
+        $this->db->join('contestant as C','C.id = CV.contestant_id');
+        $this->db->order_by('vote_count','desc');
+        $this->db->group_by('C.id');
+        $data = $this->db->get()->result_array(); 
         return $data;
     }
 
@@ -343,5 +356,21 @@ class Voting_Model extends CI_Model
         //echo '<pre>'; print_r($new_data); echo '</pre>'; die;
         return $new_data;
     }
+    function getWeeklyWiseVotes(){
+        
+// Assuming $this->General->getrow() retrieves data from your database
+// Adjust the query based on your database structure
+$this->db->select('week_id, SUM(vote_count) as total_votes');
+$this->db->from('contestant_weekly_votes');
+$this->db->group_by('week_id');
+$result = $this->db->get()->result_array();
+
+return $result;
+        //echo '<pre>'; print_r($result); echo '</pre>'; die;
+
+
+    }
+
+
 
 }

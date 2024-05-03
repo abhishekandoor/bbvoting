@@ -42,6 +42,7 @@ class Home extends MY_Controller
         }
     }
     function results(){
+
         // Check if the user has already voted today
         $ipAddress = $this->input->ip_address();
         $data =array();
@@ -51,25 +52,47 @@ class Home extends MY_Controller
             // $data['contestants'] = $this->General->getdata('contestant','*');
 
             $data['week'] = $week_id = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
-            $votes = $this->General->getdata('contestant_weekly_votes','contestant_id,vote_count',array('week_id'=>$week_id->id));
-            $data['total_weekly_vote'] = $this->General->getrow('contestant_weekly_votes','sum(vote_count) as total_votes',array('week_id'=>$week_id->id))->total_votes;
-            $data['votes_array'] = arrayKeySetter($votes,'contestant_id');
+            $votes = $this->General->getdata('contestant_weekly_votes','contestant_id,vote_count,week_id','','week_id DESC');
+            $data['votes_array'] = nestedArrayKeySetter($votes,'week_id');
+
+            // echo '<pre>'; print_r($data['votes_array']); echo '</pre>'; die;
+
+            $data['total_current_weekly_vote'] = $this->General->getrow('contestant_weekly_votes','sum(vote_count) as total_votes,week_id',array('week_id'=>$week_id->id))->total_votes;
+
+            $data['total_weekly_vote'] = $this->General->getrow('contestant_weekly_votes','sum(vote_count) as total_votes,week_id')->total_votes;
+
+            //echo $data['total_weekly_vote']; die;
+            // echo '<pre>'; print_r($data['total_weekly_vote']); echo '</pre>'; die;
+            // $data['total_weekly_vote'] = arrayKeySetter($votes,'contestant_id');
             $voted_contestant_ids = $this->General->getdata('vote_details','contestant_id',array('week_id'=>$week_id->id,'ip_address'=>$ipAddress));
 
             $data['voted_contestant_ids'] = array_map (function($value){
                 return $value['contestant_id'];
             } , $voted_contestant_ids);
             $data['page_title'] = 'Result - '.$week_id->week_name;
-            $data['top_trending'] = $this->VM->getTopTrending();
-            $data['top_popular'] = $this->VM->getTopPopular();
-            $data['top_gamers'] = $this->VM->getTopGamers();
-            $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id->id);
+            // $data['top_trending'] = $this->VM->getTopTrending();
+            // $data['top_popular'] = $this->VM->getTopPopular();
+            // $data['top_gamers'] = $this->VM->getTopGamers();
+            // $data['contestants'] = $this->VM->getNominatedContestantsByWeekId($week_id->id);
+            $Nominatedcontestants = $this->VM->getNominatedContestantsByWeekId($week_id->id);
 
-            // echo '<pre>'; print_r($data['top_gamers']); echo '</pre>'; die;
+
+            $contestants = $this->VM->getNominatedContestants();
+
+           //echo '<pre>'; print_r($week_id->id); echo '</pre>'; die; 
+            $weeklyvotes= $this->VM->getWeeklyWiseVotes();
+            $data['weeklyvotes'] = arrayKeySetter($weeklyvotes,'week_id');
+            // echo '<pre>'; print_r($data ); echo '</pre>'; die;
+            
+            $data['Nominatedcontestants'] = arrayKeySetter($Nominatedcontestants,'id');
+            $data['contestants'] = arrayKeySetter($contestants,'id');
+
             $currentDateTime = new DateTime(); // Get current datetime
             $interval = new DateInterval('PT210M'); // Create an interval of 210 minutes
             $currentDateTime->sub($interval); // Subtract the interval from the current datetime
             $data['last_updated'] = $currentDateTime->format('M d Y h:i A'); // Output the result in desired format with AM/PM indicator
+            // echo '<pre>'; print_r($data['weeklyvotes']); echo '</pre>'; die;
+            
             $this->template->write_view("content",'ml/results', $data);
             $this->template->load();
         }else{
