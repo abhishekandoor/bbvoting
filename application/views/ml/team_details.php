@@ -166,10 +166,38 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body py-3 py-md-2 px-4">
-                    <div class="row">
-                        <!--column-->
+                    <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <a href="<?php echo base_url().'index.php/ml/Home/power_team';?>">
+                                <div class="card mt-1 mt-md-3">
+                                    <div class="card-body p-3">
+                                        <div class="align-items-center h-100 d-flex flex-wrap">
+                                            <div class="d-inline-block position-relative donut-chart-sale me-2">
+                                            <span class="material-symbols-outlined team-icon">
+castle
+</span>
+
+                                            </div>
+                                            <div class=" ">
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white"> Power Team</h4>
+                                                <!-- <span class="fs-14">$5,412</span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+<hr>
+
+                    <div class="row">
+                        <!--column-->
+                        
+
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                            <a href="<?php echo base_url().'index.php/ml/Home/peoples_room';?>">
                                 <div class="card mt-1 mt-md-3">
                                     <div class="card-body p-3">
                                         <div class="align-items-center h-100 d-flex flex-wrap">
@@ -179,7 +207,7 @@
 
                                             </div>
                                             <div class=" ">
-                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white"> Power Team</h4>
+                                                <h4 class="fs-18 font-w600 mb-1 text-break text-white"> People's Room</h4>
                                                 <!-- <span class="fs-14">$5,412</span> -->
                                             </div>
                                         </div>
@@ -253,23 +281,8 @@
                             </a>
                         </div>
                         <!--/column-->
-                    </div>
-                    <!-- --/row-- -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<hr>
 
-
-
-<div class="fourth_container">
-    <div class="task_wrapper row">
-        <div class="col-xl-12">
-            <div class="card">
-                <div class="card-body py-3 py-md-2 px-4">
-                    <div class="row">
-                        <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <a href="<?php echo base_url().'index.php/ml/Home/working_team/1';?>">
                                 <div class="card mt-1 mt-md-3">
@@ -288,8 +301,6 @@
                                 </div>
                             </a>
                         </div>
-                        <!--/column-->
-                        <!--column-->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <a href="<?php echo base_url().'index.php/ml/Home/working_team/2';?>">
                                 <div class="card mt-3">
@@ -309,8 +320,7 @@
                                 </div>
                             </a>
                         </div>
-                        <!--/column-->
-                        <!--column-->
+
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <div class="card mt-3">
                                 <a href="<?php echo base_url().'index.php/ml/Home/working_team/3';?>">
@@ -330,8 +340,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--/column-->
-                        <!--column-->
+
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                             <a href="<?php echo base_url().'index.php/ml/Home/working_team/4';?>">
                                 <div class="card mt-3">
@@ -350,7 +359,14 @@
                                 </div>
                             </a>
                         </div>
-                        <!--/column-->
+
+
+
+                        
+
+
+
+
                     </div>
                     <!-- --/row-- -->
                 </div>
@@ -358,9 +374,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 
 

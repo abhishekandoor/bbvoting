@@ -382,7 +382,19 @@ function  profile(){
     $this->template->load();
 }
 
+function peoples_room(){
+    $data =array();
+    $week = $this->General->getrow('master_weeks','id,week_name',array('is_current'=>1));
+    $all_weeks = $this->General->getdata('master_weeks','id,week_name',array('id <='=>$week->id),'id desc');
+    // echo '<pre>'; print_r($all_weeks); echo '</pre>'; die;
+    $data['week_name'] = $week_name = $week->week_name;
+    $data['page_title'] = "People's Room";
+    $data['contestants'] = $this->VM->getPeoplesRoom();
+    $data['all_weeks'] = $all_weeks;
 
+    $this->template->write_view("content",'ml/peoples_room', $data);
+    $this->template->load();
+}
 
 
 
