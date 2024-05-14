@@ -141,13 +141,15 @@
 <?php
 
 // echo '<pre>'; print_r($contestants); echo '</pre>'; die;
-foreach($all_weeks as $data){ ?>
+foreach($all_weeks as $data){ 
+    
+    if(count($contestants[$data['id']]) > 0){ ?>
 
 <div><h3 class="text-white"><?php echo $data['week_name'] ?></php></php></h3></div>
 <div class="second_container">
     <div class="task_wrapper row">
         <?php 
-          if(count($contestants[$data['id']]) > 0){
+          
         foreach($contestants[$data['id']] as $row){
             $converted_string = str_replace(" ", "_", $row['name']);
             $converted_string = strtolower($converted_string);
@@ -165,15 +167,14 @@ foreach($all_weeks as $data){ ?>
             </div>
         </a>
         </div>
-        <?php }
-        }else{
-            echo '<div class="text-center text-danger">No Data Found!</div>';
+        <?php 
         } ?>
 
 
     </div>
 </div>
-  <?php  } ?>
+  <?php  }
+  } ?>
 
 
 

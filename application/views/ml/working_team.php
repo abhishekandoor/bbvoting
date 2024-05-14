@@ -142,9 +142,10 @@
 
 // echo '<pre>'; print_r($contestants); echo '</pre>'; die;
 foreach($all_weeks as $data){ 
-    if($type==2 && $data['id'] > 1){
-        continue;
-    }
+    if(count($contestants[$data['id']]) > 0){
+    // if($type==2 && $data['id'] > 1){
+    //     continue;
+    // }
     ?>
 
 <div><h3 class="text-white"><?php echo $data['week_name'] ?></php></php></h3></div>
@@ -152,7 +153,7 @@ foreach($all_weeks as $data){
 
         <div class="task_wrapper row">
             <?php 
-              if(count($contestants[$data['id']]) > 0){
+             
             foreach($contestants[$data['id']] as $row){ 
     $converted_string = str_replace(" ", "_", $row['name']);
 $converted_string = strtolower($converted_string);
@@ -172,14 +173,14 @@ $converted_string = strtolower($converted_string);
             </a>
             </div>
             <?php }
-            }else{
-                echo '<div class="text-center text-danger">No Data Found!</div>';
-            } ?>
+             ?>
     
     
         </div>
 </div>
-  <?php  } ?>
+  <?php  }
+  }
+  ?>
 
 
 
